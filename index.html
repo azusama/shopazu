@@ -4,360 +4,192 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HEYBANK - Fake Căn Cước</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <style>
-        :root {
-            --primary: #9b59b6;
-            --dark: #2c3e50;
-            --darker: #1a252f;
-            --gray: #34495e;
-        }
-        * { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI',sans-serif; }
-        body {
-            background: #000;
-            color:#ecf0f1;
-            line-height:1.6;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            min-height: 100vh;
-        }
-        .sidebar {
-            width: 280px;
-            background: linear-gradient(135deg, #8e44ad, #3498db);
-            padding: 20px;
-            position: sticky;
-            top: 0;
-            height: 100vh;
-        }
-        .logo {
-            font-size: 2.5rem;
-            font-weight: 900;
-            color: #00ff9d;
-            text-shadow: 0 0 10px #00ff9d;
-            margin-bottom: 40px;
-            text-align: center;
-        }
-        .menu a {
-            display: block;
-            padding: 15px 20px;
-            color: #fff;
-            text-decoration: none;
-            margin-bottom: 10px;
-            border-radius: 10px;
-            transition: 0.3s;
-        }
-        .menu a:hover, .menu a.active {
-            background: rgba(255,255,255,0.2);
-        }
-        .menu i { margin-right: 10px; }
-        .main {
-            flex: 1;
-            background: var(--darker);
-            padding: 30px;
-        }
-        .card {
-            background: var(--dark);
-            border-radius: 15px;
-            padding: 25px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
-        h2 {
-            margin-bottom: 20px;
-            color: #00ff9d;
-            font-size: 1.5rem;
-        }
-        .tabs {
-            display: flex;
-            margin-bottom: 20px;
-        }
-        .tab {
-            padding: 10px 20px;
-            background: var(--gray);
-            cursor: pointer;
-            border-radius: 8px 8px 0 0;
-        }
-        .tab.active {
-            background: var(--primary);
-        }
-        .form-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-        .form-group {
-            position: relative;
-        }
-        label {
-            display: block;
-            margin-bottom: 8px;
-            color: #bdc3c7;
-        }
-        input, select {
-            width: 100%;
-            padding: 12px;
-            border: none;
-            border-radius: 8px;
-            background: #34495e;
-            color: #fff;
-        }
-        .char-count {
-            position: absolute;
-            right: 10px;
-            top: 40px;
-            font-size: 0.8rem;
-            color: #e74c3c;
-        }
-        .upload-area {
-            border: 2px dashed #9b59b6;
-            border-radius: 12px;
-            padding: 40px;
-            text-align: center;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-        .upload-area:hover {
-            background: rgba(155,89,182,0.1);
-        }
-        .upload-area i {
-            font-size: 3rem;
-            color: #9b59b6;
-            margin-bottom: 15px;
-        }
-        #preview {
-            max-width: 100%;
-            max-height: 300px;
-            margin-top: 15px;
-            border-radius: 8px;
-            display: none;
-        }
-        .buttons {
-            display: flex;
-            gap: 15px;
-            margin-top: 30px;
-        }
-        .btn {
-            padding: 12px 30px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-        .btn-reset {
-            background: #34495e;
-            color: #fff;
-        }
-        .btn-create {
-            background: var(--primary);
-            color: #fff;
-            flex: 1;
-        }
-        .cccd-versions {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-            gap: 10px;
-            margin-top: 10px;
-        }
-        .version-item {
-            background: var(--gray);
-            padding: 10px;
-            text-align: center;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-        .version-item.active {
-            background: var(--primary);
-            box-shadow: 0 0 15px rgba(155,89,182,0.6);
-        }
-        @media (max-width: 768px) {
-            .container { flex-direction: column; }
-            .sidebar { width: 100%; height: auto; position: relative; }
-        }
+        :root{--p:#9b59b6;--d:#2c3e50;--g:#34495e;--lg:#00ff9d}
+        *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif}
+        body{background:#000;color:#ecf0f1;display:flex;min-height:100vh}
+        .sidebar{width:280px;background:linear-gradient(135deg,#8e44ad,#3498db);padding:20px;position:fixed;height:100%;overflow-y:auto}
+        .logo{font-size:2.8rem;font-weight:900;color:var(--lg);text-shadow:0 0 15px var(--lg);text-align:center;margin-bottom:30px}
+        .menu a{display:block;padding:15px 20px;color:#fff;text-decoration:none;border-radius:10px;margin-bottom:8px;transition:.3s}
+        .menu a:hover,.menu a.active{background:rgba(255,255,255,.2)}
+        .menu i{margin-right:10px}
+        .main{margin-left:280px;padding:30px;flex:1}
+        .card{background:var(--d);padding:25px;border-radius:15px;box-shadow:0 10px 30px rgba(0,0,0,.5)}
+        h2{color:var(--lg);margin-bottom:20px}
+        .tabs{display:flex;gap:10px;margin-bottom:20px}
+        .tab{padding:10px 25px;background:var(--g);border-radius:8px 8px 0 0;cursor:pointer}
+        .tab.active{background:var(--p);color:#fff}
+        .form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+        label{display:block;margin-bottom:8px;color:#bdc3c7}
+        input,select{width:100%;padding:12px;border:none;border-radius:8px;background:#34495e;color:#fff}
+        .char-count{position:absolute;right:10px;top:45px;font-size:0.8rem;color:#e74c3c}
+        .upload-area{border:2px dashed var(--p);border-radius:12px;padding:40px;text-align:center;cursor:pointer;margin:20px 0}
+        .upload-area:hover{background:rgba(155,89,182,.1)}
+        #preview{max-width:100%;max-height:350px;margin-top:15px;border-radius:10px;display:none}
+        .buttons{display:flex;gap:15px;margin-top:30px}
+        .btn{padding:12px 30px;border:none;border-radius:8px;cursor:pointer;font-weight:bold}
+        .btn-reset{background:#34495e;color:#fff}
+        .btn-create{background:var(--p);color:#fff;flex:1;font-size:1.1rem}
+        .version-item{background:var(--g);padding:10px;text-align:center;border-radius:8px;cursor:pointer;margin:5px}
+        .version-item.active{background:var(--p);box-shadow:0 0 15px rgba(155,89,182,.6)}
+        @media(max-width:768px){.sidebar{position:relative;width:100%;height:auto}.main{margin-left:0}}
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Sidebar -->
-        <div class="sidebar">
-            <div class="logo">HEYBANK</div>
-            <div class="menu">
-                <a href="#"><i class="fas65 fa-home"></i> Trang Chủ</a>
-                <a href="#"><i class="fas fa-gift"></i> Miễn Phí 3 Lần / Ngày</a>
-                <a href="#" class="active"><i class="fas fa-credit-card"></i> Fake Bill</a>
-                <a href="#" style="background:rgba(255,255,255,0.2)"><i class="fas fa-id-card"></i> Fake Căn Cước</a>
-                <div style="margin-top:20px;padding:0 15px;">
-                    <div style="background:var(--gray);padding:10px;border-radius:8px;margin-bottom:8px;cursor:pointer;">CCCD Ver 1</div>
-                    <div style="background:var(--gray);padding:10px;border-radius:8px;margin-bottom:8px;cursor:pointer;">CCCD Ver 2</div>
-                    <div style="background:var(--gray);padding:10px;border-radius:8px;margin-bottom:8px;cursor:pointer;">CCCD Ver 3</div>
-                    <div style="background:var(--gray);padding:10px;border-radius:8px;margin-bottom:8px;cursor:pointer;">CCCD Ver 4</div>
-                    <div style="background:var(--gray);padding:10px;border-radius:8px;margin-bottom:8px;cursor:pointer;">CCCD Ver 5</div>
-                    <div style="background:var(--gray);padding:10px;border-radius:8px;margin-bottom:8px;cursor:pointer;">CCCD Ver 6</div>
-                    <div style="background:var(--gray);padding:10px;border-radius:8px;margin-bottom:8px;cursor:pointer;">CCCD Ver 7</div>
-                    <div style="background:var(--gray);padding:10px;border-radius:8px;margin-bottom:8px;cursor:pointer;">CCCD Ver 8</div>
-                    <div style="background:var(--gray);padding:10px;border-radius:8px;margin-bottom:8px;cursor:pointer;">CCCD Cầm Tay Ver 1</div>
-                    <div style="background:var(--gray);padding:10px;border-radius:8px;margin-bottom:8px;cursor:pointer;">CCCD Cầm Tay Ver 2</div>
-                    <div style="background:var(--gray);padding:10px;border-radius:8px;cursor:pointer;">CCCD VNeID</div>
-                </div>
+    <div class="sidebar">
+        <div class="logo">HEYBANK</div>
+        <div class="menu">
+            <a href="#"><i class="fas fa-home"></i> Trang Chủ</a>
+            <a href="#"><i class="fas fa-gift"></i> Miễn Phí 3 Lần/Ngày</a>
+            <a href="#" class="active"><i class="fas fa-id-card"></i> Fake Căn Cước</a>
+            <div style="margin-top:20px;color:#fff;padding:0 15px;font-size:0.9rem">Chọn phiên bản:</div>
+            <div id="versions" style="display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:0 15px">
+                <div class="version-item active" data-ver="1">CCCD Ver 1</div>
+                <div class="version-item" data-ver="2">CCCD Ver 2</div>
+                <div class="version-item" data-ver="3">CCCD Ver 3</div>
+                <div class="version-item" data-ver="4">CCCD Ver 4</div>
+                <div class="version-item" data-ver="5">CCCD Ver 5</div>
+                <div class="version-item" data-ver="6">CCCD Ver 6</div>
+                <div class="version-item" data-ver="7">CCCD Ver 7</div>
+                <div class="version-item" data-ver="8">CCCD Ver 8</div>
+                <div class="version-item" data-ver="hand1">Cầm Tay V1</div>
+                <div class="version-item" data-ver="hand2">Cầm Tay V2</div>
+                <div class="version-item" data-ver="vneid">VNeID</div>
             </div>
         </div>
+    </div>
 
-        <!-- Main content -->
-        <div class="main">
-            <div class="card">
-                <h2>Tạo Bill Giấy Tờ Căn Cước</h2>
-                <div class="tabs">
-                    <div class="tab active">Mặt Trước</div>
-                    <div class="tab">Mặt Sau</div>
-                </div>
+    <div class="main">
+        <div class="card">
+            <h2>Tạo Giấy Tờ Căn Cước Công Dân</h2>
+            <div class="tabs">
+                <div class="tab active">Mặt Trước</div>
+                <div class="tab">Mặt Sau</div>
+            </div>
 
-                <div class="form-grid">
-                    <div class="form-group">
-                        <label>Họ Và Tên <span style="color:#e74c3c">( Còn lại 21 ký tự )</span></label>
-                        <input type="text" id="fullname" maxlength="30" placeholder="NGUYỄN VĂN A">
-                        <div class="char-count">Còn lại <span id="name-count">21</span> ký tự</div>
-                    </div>
+            <div class="form-grid">
+                <div class="form-group"><label>Họ và tên</label><input type="text" id="hoten" value="NGUYỄN VĂN A"></div>
+                <div class="form-group"><label>Giới tính</label><select id="gioitinh"><option>Nam</option><option>Nữ</option></select></div>
+                <div class="form-group"><label>Ngày sinh</label><input type="text" id="ngaysinh" value="29/07/1990"></div>
+                <div class="form-group"><label>Số CCCD</label><input type="text" id="socccd" value="027180595810"></div>
+                <div class="form-group"><label>Quê quán</label><input type="text" id="quequan" value="Hòa Thành, Tp. Cà Mau, Cà Mau"></div>
+                <div class="form-group"><label>Nơi thường trú</label><input type="text" id="noitt" value="33/2 Tổ 8 Hòa Thành, Tp. Cà Mau, Cà Mau"></div>
+                <div class="form-group"><label>Ngày hết hạn</label><input type="text" id="hethan" value="26/12/2032"></div>
+                <div class="form-group"><label>Quốc tịch</label><input type="text" id="quoctich" value="Việt Nam"></div>
+            </div>
 
-                    <div class="form-group">
-                        <label>Giới Tính</label>
-                        <select id="gender">
-                            <option>Nam</option>
-                            <option>Nữ</option>
-                        </select>
-                    </div>
+            <label>Ảnh chân dung (3x4, nền trắng)</label>
+            <div class="upload-area" id="drop-area">
+                <p>Kéo thả ảnh vào đây hoặc click để chọn</p>
+                <input type="file" id="photo" accept="image/*" hidden>
+                <img id="preview" src="" alt="Preview">
+            </div>
 
-                    <div class="form-group">
-                        <label>Ngày Sinh <span style="color:#e74c3c">( Còn lại 0 ký tự )</span></label>
-                        <input type="text" id="dob" value="29/07/1990">
-                    </div>
-
-                    <div class="form-group">
-                        <label>Số CCCD <span style="color:#e74c3c">( Bấm vào đây để tìm hiểu - Còn lại 0 ký tự )</span></label>
-                        <input type="text" id="cccd" value="027180595810">
-                    </div>
-
-                    <div class="form-group">
-                        <label>Quê Quán <span style="color:#e74c3c">( Còn lại 11 ký tự )</span></label>
-                        <input type="text" id="hometown" maxlength="50" value="Hòa Thành, Tp. Cà Mau, Cà Mau">
-                        <div class="char-count">Còn lại <span id="home-count">11</span> ký tự</div>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Nơi Thường Trú <span style="color:#e74c3c">( Còn lại 31 ký tự )</span></label>
-                        <input type="text" id="address" maxlength="80" value="33/2 Tổ 8 Hòa Thành, Tp. Cà Mau, Cà Mau">
-                        <div class="char-count">Còn lại <span id="addr-count">31</span> ký tự</div>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Ngày Hết Hạn <span style="color:#e74c3c">( Còn lại 0 ký tự )</span></label>
-                        <input type="text" id="expiry" value="26/12/3032">
-                    </div>
-
-                    <div class="form-group">
-                        <label>Quốc Tịch <span style="color:#e74c3c">( Còn lại 4 ký tự )</span></label>
-                        <input type="text" id="nationality" value="Việt Nam">
-                    </div>
-                </div>
-
-                <div style="margin-top:25px;">
-                    <label>Ảnh Thẻ Căn Cước / Tạo ảnh thẻ tại đây (chọn nền trắng - kích thước 3x4) *</label>
-                    <div class="upload-area" id="drop-area">
-                        <i class="fas fa-cloud-upload-alt"></i>
-                        <p>Kéo và thả tệp vào đây - Yêu cầu file dưới 2MB</p>
-                        <p>Hoặc</p>
-                        <button class="btn" style="background:#9b59b6;">Chọn tệp</button>
-                        <input type="file" id="file-input" accept="image/*" hidden>
-                        <img id="preview" src="" alt="Preview">
-                    </div>
-                </div>
-
-                <div class="buttons">
-                    <button class="btn btn-reset"><i class="fas fa-redo"></i> Làm Mới</button>
-                    <button class="btn btn-create"><i class="fas fa-magic"></i> Tạo Ngay</button>
-                </div>
+            <div class="buttons">
+                <button class="btn btn-reset" onclick="location.reload()">Làm Mới</button>
+                <button class="btn btn-create" onclick="taoCCCD()">Tạo Ngay</button>
             </div>
         </div>
     </div>
 
     <script>
-        // Đếm ký tự còn lại
-        function updateCount(input, counter, max) {
-            const remaining = max - input.value.length;
-            counter.textContent = remaining;
-            counter.parentElement.previousElementSibling.style.color = remaining < 10 ? '#e74c3c' : '#bdc3c7';
-        }
+        const versions = document.querySelectorAll('.version-item');
+        versions.forEach(v => v.onclick = () => {
+            versions.forEach(x => x.classList.remove('active'));
+            v.classList.add('active');
+            currentVer = v.dataset.ver;
+        });
+        let currentVer = '1';
 
-        const nameInput = document.getElementById('fullname');
-        const nameCount = document.getElementById('name-count');
-        nameInput.addEventListener('input', () => updateCount(nameInput, nameCount, 30));
-
-        const homeInput = document.getElementById('hometown');
-        const homeCount = document.getElementById('home-count');
-        homeInput.addEventListener('input', () => updateCount(homeInput, homeCount, 50));
-
-        const addrInput = document.getElementById('address');
-        const addrCount = document.getElementById('addr-count');
-        addrInput.addEventListener('input', () => updateCount(addrInput, addrCount, 80));
-
-        // Upload ảnh preview
+        // Upload ảnh
         const dropArea = document.getElementById('drop-area');
-        const fileInput = document.getElementById('file-input');
+        const photoInput = document.getElementById('photo');
         const preview = document.getElementById('preview');
-
-        ['dragover', 'dragenter'].forEach(evt => {
-            dropArea.addEventListener(evt, e => {
-                e.preventDefault();
-                dropArea.style.borderColor = '#00ff9d';
-            });
-        });
-
-        ['dragleave', 'dragend'].forEach(evt => {
-            dropArea.addEventListener(evt, e => {
-                e.preventDefault();
-                dropArea.style.borderColor = '#9b59b6';
-            });
-        });
-
-        dropArea.addEventListener('drop', e => {
-            e.preventDefault();
-            dropArea.style.borderColor = '#9b59b6';
-            const file = e.dataTransfer.files[0];
-            if (file && file.type.startsWith('image/')) {
-                showPreview(file);
+        dropArea.onclick = () => photoInput.click();
+        photoInput.onchange = e => {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = ev => {
+                    preview.src = ev.target.result;
+                    preview.style.display = 'block';
+                    dropArea.querySelector('p').style.display = 'none';
+                };
+                reader.readAsDataURL(file);
             }
-        });
+        };
 
-        dropArea.addEventListener('click', () => fileInput.click());
-        fileInput.addEventListener('change', () => {
-            if (fileInput.files[0]) showPreview(fileInput.files[0]);
-        });
+        // Tạo CCCD bằng Canvas
+        async function taoCCCD() {
+            const canvas = document.createElement('canvas');
+            canvas.width = 1200;
+            canvas.height = 760;
+            const ctx = canvas.getContext('2d');
 
-        function showPreview(file) {
-            const reader = new FileReader();
-            reader.onload = e => {
-                preview.src = e.target.result;
-                preview.style.display = 'block';
-                dropArea.querySelector('p').style.display = 'none';
-                dropArea.querySelector('i').style.display = 'none';
-                dropArea.querySelector('button').style.display = 'none';
+            // Load template
+            const tempImg = new Image();
+            tempImg.src = `https://raw.githubusercontent.com/heybankvn/fake-cccd-github/main/templates/cccd_${currentVer}.png`;
+            await new Promise(r => tempImg.onload = r);
+
+            ctx.drawImage(tempImg, 0, 0, 1200, 760);
+
+            // Font
+            ctx.fillStyle = '#000';
+            ctx.textAlign = 'left';
+
+            // Họ tên
+            ctx.font = 'bold 42px Arial';
+            ctx.fillText(document.getElementById('hoten').value.toUpperCase(), 380, 180);
+
+            // Ngày sinh + giới tính
+            ctx.font = '34px Arial';
+            ctx.fillText(document.getElementById('ngaysinh').value, 380, 240);
+            ctx.fillText(document.getElementById('gioitinh').value, 680, 240);
+
+            // Số CCCD
+            ctx.font = 'bold 40px Arial';
+            ctx.fillText(document.getElementById('socccd').value, 380, 300);
+
+            // Quê quán + thường trú
+            ctx.font = '30px Arial';
+            const wrapText = (text, x, y, maxWidth, lineHeight) => {
+                let words = text.split(' ');
+                let line = '';
+                let currentY = y;
+                for(let word of words){
+                    let testLine = line + word + ' ';
+                    let metrics = ctx.measureText(testLine);
+                    if (metrics.width > maxWidth && line !== '') {
+                        ctx.fillText(line, x, currentY);
+                        line = word + ' ';
+                        currentY += lineHeight;
+                    } else line = testLine;
+                }
+                ctx.fillText(line, x, currentY);
             };
-            reader.readAsDataURL(file);
+            wrapText(document.getElementById('quequan').value, 380, 380, 700, 38);
+            wrapText(document.getElementById('noitt').value, 380, 500, 700, 38);
+
+            // Ảnh chân dung
+            if (preview.src) {
+                const photoImg = new Image();
+                photoImg.src = preview.src;
+                await new Promise(r => photoImg.onload = r);
+                ctx.save();
+                ctx.beginPath();
+                ctx.arc(180, 180, 90, 0, Math.PI * 2);
+                ctx.clip();
+                ctx.drawImage(photoImg, 90, 90, 180, 180);
+                ctx.restore();
+            }
+
+            // Tải về
+            const link = document.createElement('a');
+            link.download = `CCCD_${document.getElementById('socccd').value}.png`;
+            link.href = canvas.toDataURL();
+            link.click();
         }
-
-        // Tab mặt trước/sau
-        document.querySelectorAll('.tab').forEach(tab => {
-            tab.addEventListener('click', () => {
-                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
-            });
-        });
-
-        // Nút Tạo Ngay (demo alert)
-        document.querySelector('.btn-create').addEventListener('click', () => {
-            alert('Đã tạo thành công! (Đây là bản demo - chưa có backend tạo ảnh thật)');
-        });
     </script>
 </body>
 </html>
