@@ -3,106 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HEYBANK - Fake Căn Cước</title>
+    <title>HEYBANK PREMIUM - Fake CCCD 2 Mặt</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <style>
         :root{--p:#9b59b6;--d:#2c3e50;--g:#34495e;--lg:#00ff9d}
         *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif}
-        body{background:#000;color:#ecf0f1;display:flex;min-height:100vh}
-        .sidebar{width:280px;background:linear-gradient(135deg,#8e44ad,#3498db);padding:20px;position:fixed;height:100%;overflow-y:auto}
-        .logo{font-size:2.8rem;font-weight:900;color:var(--lg);text-shadow:0 0 15px var(--lg);text-align:center;margin-bottom:30px}
-        .menu a{display:block;padding:15px 20px;color:#fff;text-decoration:none;border-radius:10px;margin-bottom:8px;transition:.3s}
-        .menu a:hover,.menu a.active{background:rgba(255,255,255,.2)}
-        .menu i{margin-right:10px}
-        .main{margin-left:280px;padding:30px;flex:1}
-        .card{background:var(--d);padding:25px;border-radius:15px;box-shadow:0 10px 30px rgba(0,0,0,.5)}
-        h2{color:var(--lg);margin-bottom:20px}
-        .tabs{display:flex;gap:10px;margin-bottom:20px}
-        .tab{padding:10px 25px;background:var(--g);border-radius:8px 8px 0 0;cursor:pointer}
-        .tab.active{background:var(--p);color:#fff}
-        .form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
-        label{display:block;margin-bottom:8px;color:#bdc3c7}
-        input,select{width:100%;padding:12px;border:none;border-radius:8px;background:#34495e;color:#fff}
-        .char-count{position:absolute;right:10px;top:45px;font-size:0.8rem;color:#e74c3c}
-        .upload-area{border:2px dashed var(--p);border-radius:12px;padding:40px;text-align:center;cursor:pointer;margin:20px 0}
-        .upload-area:hover{background:rgba(155,89,182,.1)}
-        #preview{max-width:100%;max-height:350px;margin-top:15px;border-radius:10px;display:none}
-        .buttons{display:flex;gap:15px;margin-top:30px}
-        .btn{padding:12px 30px;border:none;border-radius:8px;cursor:pointer;font-weight:bold}
+        body{background:#000;color:#ecf0f1;display:flex;min-height:100vh;flex-direction:column}
+        .sidebar{width:100%;background:linear-gradient(135deg,#8e44ad,#3498db);padding:20px;position:relative}
+        .logo{font-size:2.8rem;font-weight:900;color:var(--lg);text-shadow:0 0 15px var(--lg);text-align:center;margin:20px 0}
+        .versions{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin:20px 0}
+        .version-item{background:var(--g);padding:15px;text-align:center;border-radius:12px;cursor:pointer;color:#fff;font-weight:bold;transition:.3s}
+        .version-item.active,.version-item:hover{background:var(--p);box-shadow:0 0 20px rgba(155,89,182,.8)}
+        .main{padding:20px;flex:1}
+        .card{background:var(--d);padding:25px;border-radius:20px;box-shadow:0 15px 40px rgba(0,0,0,.7);margin-bottom:20px}
+        h2{color:var(--lg);margin-bottom:20px;text-align:center;font-size:2rem}
+        .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+        label{display:block;margin-bottom:8px;color:#bdc3c7;font-size:1.1rem}
+        input,select{width:100%;padding:15px;border:none;border-radius:12px;background:#34495e;color:#fff;font-size:1rem}
+        .upload-area{border:3px dashed var(--p);border-radius:15px;padding:40px;text-align:center;cursor:pointer;margin:20px 0;background:rgba(155,89,182,.1)}
+        .upload-area:hover{background:rgba(155,89,182,.2)}
+        #preview{max-width:100%;border-radius:12px;margin-top:15px;display:none}
+        .buttons{display:flex;gap:15px;margin-top:30px;justify-content:center}
+        .btn{padding:15px 40px;border:none;border-radius:12px;cursor:pointer;font-weight:bold;font-size:1.2rem;transition:.3s}
         .btn-reset{background:#34495e;color:#fff}
-        .btn-create{background:var(--p);color:#fff;flex:1;font-size:1.1rem}
-        .version-item{background:var(--g);padding:10px;text-align:center;border-radius:8px;cursor:pointer;margin:5px}
-        .version-item.active{background:var(--p);box-shadow:0 0 15px rgba(155,89,182,.6)}
-        @media(max-width:768px){.sidebar{position:relative;width:100%;height:auto}.main{margin-left:0}}
+        .btn-create{background:var(--p);color:#fff;box-shadow:0 0 20px rgba(155,89,182,.6)}
+        .result{text-align:center;margin-top:30px}
+        .result img{max-width:100%;border-radius:15px;box-shadow:0 10px 30px rgba(0,0,0,.8)}
+        @media(min-width:768px){.sidebar{width:300px;position:fixed;height:100%;overflow-y:auto}}
+        @media(max-width:768px){.form-grid{grid-template-columns:1fr}}
     </style>
 </head>
 <body>
     <div class="sidebar">
-        <div class="logo">HEYBANK</div>
-        <div class="menu">
-            <a href="#"><i class="fas fa-home"></i> Trang Chủ</a>
-            <a href="#"><i class="fas fa-gift"></i> Miễn Phí 3 Lần/Ngày</a>
-            <a href="#" class="active"><i class="fas fa-id-card"></i> Fake Căn Cước</a>
-            <div style="margin-top:20px;color:#fff;padding:0 15px;font-size:0.9rem">Chọn phiên bản:</div>
-            <div id="versions" style="display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:0 15px">
-                <div class="version-item active" data-ver="1">CCCD Ver 1</div>
-                <div class="version-item" data-ver="2">CCCD Ver 2</div>
-                <div class="version-item" data-ver="3">CCCD Ver 3</div>
-                <div class="version-item" data-ver="4">CCCD Ver 4</div>
-                <div class="version-item" data-ver="5">CCCD Ver 5</div>
-                <div class="version-item" data-ver="6">CCCD Ver 6</div>
-                <div class="version-item" data-ver="7">CCCD Ver 7</div>
-                <div class="version-item" data-ver="8">CCCD Ver 8</div>
-                <div class="version-item" data-ver="hand1">Cầm Tay V1</div>
-                <div class="version-item" data-ver="hand2">Cầm Tay V2</div>
-                <div class="version-item" data-ver="vneid">VNeID</div>
-            </div>
+        <div class="logo">HEYBANK<br><span style="font-size:1rem">PREMIUM</span></div>
+        <div class="versions">
+            <div class="version-item active" data-ver="8">CCCD Ver 8</div>
+            <div class="version-item" data-ver="hand1">Cầm Tay V1</div>
+            <div class="version-item" data-ver="hand2">Cầm Tay V2</div>
+            <div class="version-item" data-ver="vneid">VNeID</div>
         </div>
     </div>
 
     <div class="main">
         <div class="card">
-            <h2>Tạo Giấy Tờ Căn Cước Công Dân</h2>
-            <div class="tabs">
-                <div class="tab active">Mặt Trước</div>
-                <div class="tab">Mặt Sau</div>
-            </div>
-
+            <h2>FAKE CCCD 2 MẶT - SIÊU THẬT</h2>
             <div class="form-grid">
-                <div class="form-group"><label>Họ và tên</label><input type="text" id="hoten" value="NGUYỄN VĂN A"></div>
-                <div class="form-group"><label>Giới tính</label><select id="gioitinh"><option>Nam</option><option>Nữ</option></select></div>
-                <div class="form-group"><label>Ngày sinh</label><input type="text" id="ngaysinh" value="29/07/1990"></div>
-                <div class="form-group"><label>Số CCCD</label><input type="text" id="socccd" value="027180595810"></div>
-                <div class="form-group"><label>Quê quán</label><input type="text" id="quequan" value="Hòa Thành, Tp. Cà Mau, Cà Mau"></div>
-                <div class="form-group"><label>Nơi thường trú</label><input type="text" id="noitt" value="33/2 Tổ 8 Hòa Thành, Tp. Cà Mau, Cà Mau"></div>
-                <div class="form-group"><label>Ngày hết hạn</label><input type="text" id="hethan" value="26/12/2032"></div>
-                <div class="form-group"><label>Quốc tịch</label><input type="text" id="quoctich" value="Việt Nam"></div>
+                <div><label>Họ và tên</label><input id="hoten" value="NGUYỄN VĂN A"></div>
+                <div><label>Giới tính</label><select id="gioitinh"><option>Nam</option><option>Nữ</option></select></div>
+                <div><label>Ngày sinh</label><input id="ngaysinh" value="29/07/1990"></div>
+                <div><label>Số CCCD</label><input id="socccd" value="027180595810"></div>
+                <div><label>Quê quán</label><input id="quequan" value="Hòa Thành, Tp. Cà Mau, Cà Mau"></div>
+                <div><label>Nơi thường trú</label><input id="noitt" value="33/2 Tổ 8 Hòa Thành, Tp. Cà Mau, Cà Mau"></div>
+                <div><label>Ngày hết hạn</label><input id="hethan" value="26/12/2032"></div>
+                <div><label>Quốc tịch</label><input id="quoctich" value="Việt Nam"></div>
+                <div><label>Ngày cấp (mặt sau)</label><input id="ngaycap" value="20/04/2022"></div>
+                <div><label>MRZ (mặt sau)</label><input id="mrz" value="NGUYEN<<VAN<A"></div>
             </div>
 
-            <label>Ảnh chân dung (3x4, nền trắng)</label>
+            <label>Ảnh chân dung 3x4 (nền trắng)</label>
             <div class="upload-area" id="drop-area">
-                <p>Kéo thả ảnh vào đây hoặc click để chọn</p>
+                <p>Click hoặc kéo thả ảnh vào đây</p>
                 <input type="file" id="photo" accept="image/*" hidden>
                 <img id="preview" src="" alt="Preview">
             </div>
 
             <div class="buttons">
                 <button class="btn btn-reset" onclick="location.reload()">Làm Mới</button>
-                <button class="btn btn-create" onclick="taoCCCD()">Tạo Ngay</button>
+                <button class="btn btn-create" onclick="taoCCCD2Mat()">TẠO 2 MẶT</button>
             </div>
         </div>
+
+        <div class="result" id="result"></div>
     </div>
 
     <script>
-        const versions = document.querySelectorAll('.version-item');
-        versions.forEach(v => v.onclick = () => {
-            versions.forEach(x => x.classList.remove('active'));
+        let currentVer = '8';
+        document.querySelectorAll('.version-item').forEach(v => v.onclick = () => {
+            document.querySelectorAll('.version-item').forEach(x => x.classList.remove('active'));
             v.classList.add('active');
             currentVer = v.dataset.ver;
         });
-        let currentVer = '1';
 
-        // Upload ảnh
         const dropArea = document.getElementById('drop-area');
         const photoInput = document.getElementById('photo');
         const preview = document.getElementById('preview');
@@ -120,75 +101,94 @@
             }
         };
 
-        // Tạo CCCD bằng Canvas
-        async function taoCCCD() {
+        async function taoCCCD2Mat() {
+            const result = document.getElementById('result');
+            result.innerHTML = '<p>Đang tạo ảnh 2 mặt siêu thật... ⏳</p>';
+
             const canvas = document.createElement('canvas');
-            canvas.width = 1200;
-            canvas.height = 760;
+            canvas.width = 1800;
+            canvas.height = 1140;
             const ctx = canvas.getContext('2d');
 
-            // Load template
-            const tempImg = new Image();
-            tempImg.src = `https://raw.githubusercontent.com/heybankvn/fake-cccd-github/main/templates/cccd_${currentVer}.png`;
-            await new Promise(r => tempImg.onload = r);
+            // Load phôi mặt trước
+            const front = new Image();
+            front.src = 'cccd_front.png';
+            await new Promise(r => front.onload = r);
 
-            ctx.drawImage(tempImg, 0, 0, 1200, 760);
+            // Load phôi mặt sau
+            const back = new Image();
+            back.src = 'cccd_back.png';
+            await new Promise(r => back.onload = r);
+
+            // Vẽ nền trắng + 2 mặt
+            ctx.fillStyle = '#fff';
+            ctx.fillRect(0, 0, 1800, 1140);
+            ctx.drawImage(front, 50, 50, 800, 500);
+            ctx.drawImage(back, 900, 50, 800, 500);
 
             // Font
             ctx.fillStyle = '#000';
             ctx.textAlign = 'left';
 
-            // Họ tên
-            ctx.font = 'bold 42px Arial';
-            ctx.fillText(document.getElementById('hoten').value.toUpperCase(), 380, 180);
+            // === MẶT TRƯỚC ===
+            ctx.font = 'bold 38px Arial';
+            ctx.fillText(document.getElementById('hoten').value.toUpperCase(), 380, 170);
+            ctx.font = '32px Arial';
+            ctx.fillText(document.getElementById('ngaysinh').value, 380, 230);
+            ctx.fillText(document.getElementById('gioitinh').value, 680, 230);
+            ctx.font = 'bold 36px Arial';
+            ctx.fillText(document.getElementById('socccd').value, 380, 290);
 
-            // Ngày sinh + giới tính
-            ctx.font = '34px Arial';
-            ctx.fillText(document.getElementById('ngaysinh').value, 380, 240);
-            ctx.fillText(document.getElementById('gioitinh').value, 680, 240);
-
-            // Số CCCD
-            ctx.font = 'bold 40px Arial';
-            ctx.fillText(document.getElementById('socccd').value, 380, 300);
-
-            // Quê quán + thường trú
-            ctx.font = '30px Arial';
+            // Địa chỉ quê quán + thường trú
             const wrapText = (text, x, y, maxWidth, lineHeight) => {
                 let words = text.split(' ');
                 let line = '';
-                let currentY = y;
-                for(let word of words){
-                    let testLine = line + word + ' ';
-                    let metrics = ctx.measureText(testLine);
-                    if (metrics.width > maxWidth && line !== '') {
-                        ctx.fillText(line, x, currentY);
+                let cy = y;
+                for (let word of words) {
+                    let test = line + word + ' ';
+                    if (ctx.measureText(test).width > maxWidth && line !== '') {
+                        ctx.fillText(line, x, cy);
                         line = word + ' ';
-                        currentY += lineHeight;
-                    } else line = testLine;
+                        cy += lineHeight;
+                    } else line = test;
                 }
-                ctx.fillText(line, x, currentY);
+                ctx.fillText(line, x, cy);
             };
-            wrapText(document.getElementById('quequan').value, 380, 380, 700, 38);
-            wrapText(document.getElementById('noitt').value, 380, 500, 700, 38);
+            ctx.font = '28px Arial';
+            wrapText(document.getElementById('quequan').value, 380, 360, 380, 35);
+            wrapText(document.getElementById('noitt').value, 380, 460, 380, 35);
 
             // Ảnh chân dung
             if (preview.src) {
-                const photoImg = new Image();
-                photoImg.src = preview.src;
-                await new Promise(r => photoImg.onload = r);
+                const photo = new Image();
+                photo.src = preview.src;
+                await new Promise(r => photo.onload = r);
                 ctx.save();
                 ctx.beginPath();
-                ctx.arc(180, 180, 90, 0, Math.PI * 2);
+                ctx.arc(180, 180, 85, 0, Math.PI * 2);
                 ctx.clip();
-                ctx.drawImage(photoImg, 90, 90, 180, 180);
+                ctx.drawImage(photo, 95, 95, 170, 170);
                 ctx.restore();
             }
 
-            // Tải về
+            // === MẶT SAU ===
+            ctx.font = '28px Arial';
+            ctx.fillText(document.getElementById('ngaycap').value, 1080, 380);
+            ctx.fillText(document.getElementById('mrz').value, 1080, 480);
+
+            // Tạo link tải
             const link = document.createElement('a');
-            link.download = `CCCD_${document.getElementById('socccd').value}.png`;
+            link.download = `CCCD_2MAT_${document.getElementById('socccd').value}.png`;
             link.href = canvas.toDataURL();
             link.click();
+
+            // Hiển thị kết quả
+            result.innerHTML = `
+                <p>✅ TẠO THÀNH CÔNG! Đã tải về ảnh 2 mặt 4K</p>
+                <img src="${canvas.toDataURL()}">
+                <br><br>
+                <button class="btn btn-create" onclick="location.reload()">TẠO THÊM</button>
+            `;
         }
     </script>
 </body>
