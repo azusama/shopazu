@@ -1,1254 +1,744 @@
 
 <!DOCTYPE html>
-<html class="loading dark-layout" lang="en" data-textdirection="ltr">
+<html lang="vi">
+<link rel="icon" href="/favicon.ico">
+
 <head>
-    <base href="https://app.fakebill.org/fe/">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0,minimal-ui">
-    <meta name="description" content="FakeBill.org là hệ thống làm giả bill ngân hàng Việt Nam uy tín, hỗ trợ tạo hóa đơn chuyển khoản, sao kê, biến động số dư chuyên nghiệp. Giao diện dễ dùng, xử lý nhanh chóng, bảo mật tuyệt đối.">
-    <meta name="keywords" content="tạo bill chuyển khoản, tạo bill ngân hàng vietcombank, mbbank, techcombank, agribank, bán kyc, làm bill ngân hàng, tạo bill vcb, tạo bill tpbank, làm bill chuyển khoản, tạo bill ảo, tạo bill chuyển khoản ngân hàng, bán kyc">
-    <meta name="author" content="FAKEBILL.ORG">
-    <meta name="csrf-token" content="683Xu8sUIVBrSqrRqsneqnF45qC1AV6ECxus9CHN">
-    <!-- if production mode enable this meta -->
-        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <title>Fake Bill - Hệ Thống Làm Giả Bill Ngân Hàng Việt Nam Uy Tín Tại FAKEBILL.ORG</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600" rel="stylesheet">
-
-    <link rel="apple-touch-icon" sizes="180x180" href="/faviconbank.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/faviconbank.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/faviconbank.png">
-    <link rel="manifest" href="/site.webmanifest">
-
-    <link rel="stylesheet" type="text/css" href="vendors/css/vendors.min.css?time=1762436825">
-    <link rel="stylesheet" type="text/css" href="vendors/css/extensions/toastr.min.css?time=1762436825">
-    <link rel="stylesheet" type="text/css" href="vendors/css/extensions/sweetalert2.min.css?time=1762436825">
-    <link rel="stylesheet" type="text/css" href="vendors/css/forms/select/select2.min.css?time=1762436825">
-    <link rel="stylesheet" type="text/css" href="vendors/css/charts/apexcharts.css?time=1762436825">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css?time=1762436825">
-
-
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css?time=1762436825">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-extended.css?time=1762436825">
-    <link rel="stylesheet" type="text/css" href="css/colors.css?time=1762436825">
-
-    <link rel="stylesheet" type="text/css" href="css/themes/dark-layout.css?time=1762436825">
-    <link rel="stylesheet" type="text/css" href="css/themes/bordered-layout.css?time=1762436825">
-    <link rel="stylesheet" type="text/css" href="css/themes/semi-dark-layout.css?time=1762436825">
-
-    <link rel="stylesheet" type="text/css" href="css/core/menu/menu-types/vertical-menu.css?time=1762436825">
-    <link rel="stylesheet" type="text/css" href="css/plugins/extensions/ext-component-toastr.css?time=1762436825">
-    <link rel="stylesheet" type="text/css" href="css/plugins/extensions/ext-component-sweet-alerts.css?time=1762436825">
-    <link rel="stylesheet" type="text/css" href="css/plugins/forms/form-validation.css?time=1762436825">
-    <link rel="stylesheet" type="text/css" href="css/contact-buttons.min.css?time=1762436825">
-    <link href="https://cdn.jsdelivr.net/gh/startinhit/font-awesome/css/all.css?time=1762436825" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="css/plugins/charts/chart-apex.css?time=1762436825">
-    <style>
-        .timeline-item p:last-child {
-            margin: 0;
+    <meta charset="utf-8">
+    <title>Fake CCCD</title>
+<meta name="title" content="Fake CCCD" />
+<meta name="description" content="web Fakebill.LePhanQuocAnh - Dịch vụ fake bill chuyển khoản ngân hàng Vietcombank, Sacombank, MBBank, Techcombank, BIDV, Viettinbank,..." />
+<meta name="keyword" content="fakebill, bill fake, fakebill.lephanquocanh.net, fakebill lephanquocanh, lephanquocanh.net, lephanquocanh, TaoBill.Co, fakebill, fakebillck, fake bill bidv, fake bill nước ngoài, fake bill mb, fake bill vcb, fake bill free, tao bill ck, taobillck.co, taobillck.com, fake bill,fakebill,fakebillck,fake bill chuyen tien,fake bill chuyen khoan, fake bill free, fake bill ck, fake bill ngan hang, fake bill momo, fake bill tech, fake bill vcb, fake bill mb, web tạo bill chuyển tiền giả, tạo bill chuyển tiền miễn phí, photoshop bill chuyển tiền, web fake bill, Fake App ngân hàng miễn phí, fake bill chuyển khoản free, ngân hàng ảo" />
+<meta name="author" content="Mohamed Elabhja" />
+<meta property="twitter:title" content="Fake CCCD" />
+<meta property="twitter:description" content="web Fakebill.LePhanQuocAnh - Dịch vụ fake bill chuyển khoản ngân hàng Vietcombank, Sacombank, MBBank, Techcombank, BIDV, Viettinbank,..." />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://avatars3.githubusercontent.com/u/8259014" />
+<meta property="og:title" content="Fake CCCD" />
+<meta property="og:description" content="web Fakebill.LePhanQuocAnh - Dịch vụ fake bill chuyển khoản ngân hàng Vietcombank, Sacombank, MBBank, Techcombank, BIDV, Viettinbank,..." />
+<meta property="og:image" content="https://avatars3.githubusercontent.com/u/8259014" />    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="./css/vendors/flatpickr.min.css" rel="stylesheet">
+    <link href="./css/vendors/flatpickr.min.css" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+    <script>
+        if (localStorage.getItem('dark-mode') === 'false' || !('dark-mode' in localStorage)) {
+            document.querySelector('html').classList.remove('dark');
+            document.querySelector('html').style.colorScheme = 'light';
+        } else {
+            document.querySelector('html').classList.add('dark');
+            document.querySelector('html').style.colorScheme = 'dark';
         }
-        .timeline .timeline-item .timeline-point {
-            left: -1.4rem;
-            height: 2.75rem;
-            width: 2.75rem;
-            border: none;
-        }
-        .scroll {
-            max-height: 500px;
-            overflow-y: scroll;
-        }
-        .scroll::-webkit-scrollbar {
-            width: 3px;
-        }
-        .scroll::-webkit-scrollbar-thumb {
-            background: rgb(0 0 0 / 20%);
-        }
-    </style>
-    <link rel="stylesheet" type="text/css" href="css/style.css?time=1762436825">
-        <link rel="stylesheet" type="text/css"
-          href="vendors/css/pickers/pickadate/pickadate.css">
-    <link rel="stylesheet" type="text/css"
-          href="vendors/css/pickers/flatpickr/flatpickr.min.css">
-    <link rel="stylesheet" type="text/css"
-          href="vendors/css/forms/wizard/bs-stepper.min.css">
-    <link rel="stylesheet" type="text/css"
-          href="css/plugins/forms/pickers/form-flat-pickr.css">
-    <link rel="stylesheet" type="text/css" href="css/plugins/forms/form-wizard.css">
-    <style>
-        .background {
-            display: inline-block;
-        }
-        .background:first-child {
-            margin-right: 20px;
-        }
-        .background img {
-            max-width: 100px;
-            margin-bottom: 10px;
-        }
-        .image-scroll {
-            max-width: 100px;
-            display: flex;
-            align-items: center;
-            flex-flow: column;
-        }
-        .image-scroll img {
-            margin-bottom: 10px;
-            border-radius: 10px;
-        }
-        label {
-            cursor: pointer;
-        }
-    </style>
-    <link rel="stylesheet" type="text/css" href="css/components.css?time=1762436825">
-
-
-
-
-
-
-
-
-
-
-
-
-
+    </script>
 </head>
 
+<body
+    class="font-inter antialiased bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400"
+    :class="{ 'sidebar-expanded': sidebarExpanded }"
+    x-data="{ sidebarOpen: false, sidebarExpanded: localStorage.getItem('sidebar-expanded') == 'true' }"
+    x-init="$watch('sidebarExpanded', value => localStorage.setItem('sidebar-expanded', value))">
 
-<body class="vertical-layout vertical-menu-modern  navbar-floating footer-static  " data-open="click"
-      data-menu="vertical-menu-modern" data-col>
-
-<div class="preloader">
-    <div class="preloader-icon"></div>
-    <span>Vui lòng chờ...</span>
-</div>
-
-<nav
-    class="header-navbar navbar navbar-expand-lg align-items-center floating-nav navbar-dark navbar-shadow container-xxl">
-    <div class="navbar-container d-flex content">
-        <div class="bookmark-wrapper d-flex align-items-center">
-            <ul class="nav navbar-nav d-xl-none">
-                <li class="nav-item"><a class="nav-link menu-toggle" href="#"><i class="ficon"
-                                                                                 data-feather="menu"></i></a></li>
-            </ul>
-            <ul class="nav navbar-nav bookmark-icons">
-                <li class="nav-item d-none d-lg-block"><a class="nav-link" href="https://app.fakebill.org/profile" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Thông tin tài khoản"><i
-                            class="ficon" data-feather="user"></i></a></li>
-                <li class="nav-item d-none d-lg-block"><a class="nav-link" href="https://app.fakebill.org/change-pass" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Đổi mật khẩu"><i class="ficon"
-                                                                                                                                      data-feather="lock"></i></a>
-                </li>
-                <li class="nav-item d-none d-lg-block"><a class="nav-link" href="https://app.fakebill.org/deposits" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Nạp tiền"><i class="ficon"
-                                                                                                                                  data-feather="credit-card"></i></a>
-                </li>
-            </ul>
-        </div>
-        <ul class="nav navbar-nav align-items-center ms-auto">
-            <li class="nav-item d-lg-block"><a class="nav-link nav-link-style"><i class="ficon"
-                                                                                  data-feather="sun"></i></a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <li class="nav-item dropdown dropdown-user"><a class="nav-link dropdown-toggle dropdown-user-link"
-                                                           id="dropdown-user" href="#" data-bs-toggle="dropdown" aria-haspopup="true"
-                                                           aria-expanded="false">
-                    <div class="user-nav d-sm-flex d-none align-items-center me-0"><span
-                            class="user-name fw-bolder">0đ</span><span class="user-status">Số
-                                dư ví</span>
-                    </div>
-                </a>
-            </li>
-            <li class="nav-item dropdown dropdown-user">
-                <a class="nav-link dropdown-toggle dropdown-user-link"
-                                                           id="dropdown-user" href="#" data-bs-toggle="dropdown" aria-haspopup="true"
-                                                           aria-expanded="false">
-                    <div class="user-nav d-sm-flex d-none align-items-center"><span
-                            class="user-name fw-bolder">njkasdnjhas</span><span class="user-status">Người dùng</span>
-                    </div>
-                    <span class="avatar">
-                                                    <img src="https://www.gravatar.com/avatar/407d9d75ba1fc53d88ca410c54d91fc0?s=40&d=mp&r=g" />                                                <span class="avatar-status-online"></span>
-                    </span>
-                </a>
-                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdown-user">
-                    <a class="dropdown-item" href="https://app.fakebill.org/profile"><i class="me-50"
-                                                                                     data-feather="user"></i>
-                        Thông tin</a>
-                    <a class="dropdown-item" href="https://app.fakebill.org/buying-history"><i
-                            class="fal fa-history me-50"></i>
-                        Lịch
-                        sử</a>
-                    <a class="dropdown-item" href="https://app.fakebill.org/deposits"><i
-                            class="fal fa-credit-card me-50"></i>
-                        Nạp
-                        tiền</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" onclick="logout()"
-                       href="javascript:void(0)"><i class="me-50" data-feather="power"></i> Đăng xuất</a>
-                </div>
-            </li>
-        </ul>
-    </div>
-</nav>
-<ul class="main-search-list-defaultlist d-none">
-    <li class="d-flex align-items-center"><a href="#">
-            <h6 class="section-label mt-75 mb-0">Files</h6>
-        </a></li>
-    <li class="auto-suggestion"><a class="d-flex align-items-center justify-content-between w-100"
-                                   href="app-file-manager.html">
-            <div class="d-flex">
-                <div class="me-75"><img src="images/icons/xls.png" alt="png"
-                                        height="32"></div>
-                <div class="search-data">
-                    <p class="search-data-title mb-0">Two new item submitted</p><small class="text-muted">Marketing
-                        Manager</small>
-                </div>
-            </div><small class="search-data-size me-50 text-muted">&apos;17kb</small>
-        </a></li>
-    <li class="auto-suggestion"><a class="d-flex align-items-center justify-content-between w-100"
-                                   href="app-file-manager.html">
-            <div class="d-flex">
-                <div class="me-75"><img src="images/icons/jpg.png" alt="png"
-                                        height="32"></div>
-                <div class="search-data">
-                    <p class="search-data-title mb-0">52 JPG file Generated</p><small class="text-muted">FontEnd
-                        Developer</small>
-                </div>
-            </div><small class="search-data-size me-50 text-muted">&apos;11kb</small>
-        </a></li>
-    <li class="auto-suggestion"><a class="d-flex align-items-center justify-content-between w-100"
-                                   href="app-file-manager.html">
-            <div class="d-flex">
-                <div class="me-75"><img src="images/icons/pdf.png" alt="png"
-                                        height="32"></div>
-                <div class="search-data">
-                    <p class="search-data-title mb-0">25 PDF File Uploaded</p><small class="text-muted">Digital
-                        Marketing Manager</small>
-                </div>
-            </div><small class="search-data-size me-50 text-muted">&apos;150kb</small>
-        </a></li>
-    <li class="auto-suggestion"><a class="d-flex align-items-center justify-content-between w-100"
-                                   href="app-file-manager.html">
-            <div class="d-flex">
-                <div class="me-75"><img src="images/icons/doc.png" alt="png"
-                                        height="32"></div>
-                <div class="search-data">
-                    <p class="search-data-title mb-0">Anna_Strong.doc</p><small class="text-muted">Web
-                        Designer</small>
-                </div>
-            </div><small class="search-data-size me-50 text-muted">&apos;256kb</small>
-        </a></li>
-    <li class="d-flex align-items-center"><a href="#">
-            <h6 class="section-label mt-75 mb-0">Members</h6>
-        </a></li>
-    <li class="auto-suggestion"><a class="d-flex align-items-center justify-content-between py-50 w-100"
-                                   href="app-user-view-account.html">
-            <div class="d-flex align-items-center">
-                <div class="avatar me-75"><img
-                        src="images/portrait/small/avatar-s-8.jpg" alt="png"
-                        height="32"></div>
-                <div class="search-data">
-                    <p class="search-data-title mb-0">John Doe</p><small class="text-muted">UI designer</small>
-                </div>
-            </div>
-        </a></li>
-    <li class="auto-suggestion"><a class="d-flex align-items-center justify-content-between py-50 w-100"
-                                   href="app-user-view-account.html">
-            <div class="d-flex align-items-center">
-                <div class="avatar me-75"><img
-                        src="images/portrait/small/avatar-s-1.jpg" alt="png"
-                        height="32"></div>
-                <div class="search-data">
-                    <p class="search-data-title mb-0">Michal Clark</p><small class="text-muted">FontEnd
-                        Developer</small>
-                </div>
-            </div>
-        </a></li>
-    <li class="auto-suggestion"><a class="d-flex align-items-center justify-content-between py-50 w-100"
-                                   href="app-user-view-account.html">
-            <div class="d-flex align-items-center">
-                <div class="avatar me-75"><img
-                        src="images/portrait/small/avatar-s-14.jpg" alt="png"
-                        height="32"></div>
-                <div class="search-data">
-                    <p class="search-data-title mb-0">Milena Gibson</p><small class="text-muted">Digital Marketing
-                        Manager</small>
-                </div>
-            </div>
-        </a></li>
-    <li class="auto-suggestion"><a class="d-flex align-items-center justify-content-between py-50 w-100"
-                                   href="app-user-view-account.html">
-            <div class="d-flex align-items-center">
-                <div class="avatar me-75"><img
-                        src="images/portrait/small/avatar-s-6.jpg" alt="png"
-                        height="32"></div>
-                <div class="search-data">
-                    <p class="search-data-title mb-0">Anna Strong</p><small class="text-muted">Web
-                        Designer</small>
-                </div>
-            </div>
-        </a></li>
-</ul>
-<ul class="main-search-list-defaultlist-other-list d-none">
-    <li class="auto-suggestion justify-content-between"><a
-            class="d-flex align-items-center justify-content-between w-100 py-50">
-            <div class="d-flex justify-content-start"><span class="me-75"
-                                                            data-feather="alert-circle"></span><span>No results found.</span></div>
-        </a></li>
-</ul>
-<script type="text/javascript">
-    function logout() {
-        Swal.fire({
-            title: 'Cảnh báo!',
-            text: "Bạn có chắc chắn muốn đăng xuất không?",
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonText: 'Có, tôi muốn!',
-            cancelButtonText: 'Không',
-            customClass: {
-                confirmButton: 'btn btn-primary',
-                cancelButton: 'btn btn-outline-danger ms-1'
-            },
-            buttonsStyling: false
-        }).then(function(result) {
-            if (result.value) {
-                Swal.fire({
-                    icon: 'success',
-                    title: 'Chúc mừng!',
-                    text: 'Bạn đã đăng xuất thành công.',
-                    customClass: {
-                        confirmButton: 'btn btn-success'
-                    }
-                }).then(function() {
-                    window.location = 'http://app.fakebill.org/logout'
-                });
-            }
-        });
-    }
-</script>
-<div class="main-menu menu-fixed menu-dark menu-accordion menu-shadow" data-scroll-to-active="true">
-    <div class="navbar-header">
-        <ul class="nav navbar-nav flex-row">
-            <li class="nav-item me-auto">
-                <a class="navbar-brand" href="https://app.fakebill.org">
-                    <div class="logo-site">
-                        <img src="https://app.fakebill.org/q3Mgfxcvkh.png" alt="logo site">
-                    </div>
-                </a>
-            </li>
-            <li class="nav-item nav-toggle"><a class="nav-link modern-nav-toggle pe-0" data-bs-toggle="collapse"><i
-                        class="d-block d-xl-none text-primary toggle-icon font-medium-4" data-feather="x"></i><i
-                        class="d-none d-xl-block collapse-toggle-icon font-medium-4  text-primary"
-                        data-feather="disc" data-ticon="disc"></i></a></li>
-        </ul>
-    </div>
-    <div class="shadow-bottom"></div>
-    <div class="main-menu-content">
-        <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
-    <li class="nav-item disabled "><a class="d-flex align-items-center" href="javascript:void(0)"><span
-                class="menu-title text-truncate" data-i18n="Menu Levels">Số
-                            dư ví:
-                            0đ</span></a>
-    </li>
-    <li class=" navigation-header">
-        <span data-i18n="Menu chức năng">Menu chức năng</span>
-        <i data-feather="more-horizontal"></i></li>
-    <li class="nav-item"><a class="d-flex align-items-center" href="https://app.fakebill.org"><i
-                data-feather="home"></i><span class="menu-title text-truncate"
-                                              data-i18n="Menu Levels">Dashboard</span></a>
-    </li>
-    <li class="nav-item"><a class="d-flex align-items-center" href="https://app.fakebill.org/account-packs"><i data-feather="package"></i><span
-                class="menu-title text-truncate" data-i18n="Menu Levels">Gói
-                                tài
-                                khoản</span></a>
-    </li>
-    <li class="nav-item"><a class="d-flex align-items-center" href="#" data-bs-toggle="modal"
-                            data-bs-target="#price-list"><i data-feather="dollar-sign"></i><span
-                class="menu-title text-truncate" data-i18n="Menu Levels">Bảng giá bill</span></a>
-    </li>
-    <li class="nav-item"><a class="d-flex align-items-center" href="https://app.fakebill.org/deposits"><i
-                data-feather="credit-card"></i><span class="menu-title text-truncate"
-                                                     data-i18n="Menu Levels">Nạp tiền</span></a>
-    </li>
-    <li class=" navigation-header"><span data-i18n="Menu tạo bill">Menu tạo bill</span><i
-            data-feather="more-horizontal"></i></li>
-    <li class="nav-item"><a class="d-flex align-items-center" href="https://app.fakebill.org/bill/transfer">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16"
-                 height="16" fill="currentColor" class="bi bi-bank2" viewbox="0 0 16 16">
-                <path
-                    d="M8.277.084a.5.5 0 0 0-.554 0l-7.5 5A.5.5 0 0 0 .5 6h1.875v7H1.5a.5.5 0 0 0 0 1h13a.5.5 0 1 0 0-1h-.875V6H15.5a.5.5 0 0 0 .277-.916l-7.5-5zM12.375 6v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zM8 4a1 1 0 1 1 0-2 1 1 0 0 1 0 2zM.5 15a.5.5 0 0 0 0 1h15a.5.5 0 1 0 0-1H.5z"/>
-            </svg>
-            <span class="menu-title text-truncate" data-i18n="Menu Levels">Bill chuyển
-                            khoản</span></a>
-    </li>
-    <li class="nav-item"><a class="d-flex align-items-center" href="https://app.fakebill.org/bill/transaction">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16"
-                 height="16" fill="currentColor" class="bi bi-bank2" viewbox="0 0 16 16">
-                <path
-                    d="M8.277.084a.5.5 0 0 0-.554 0l-7.5 5A.5.5 0 0 0 .5 6h1.875v7H1.5a.5.5 0 0 0 0 1h13a.5.5 0 1 0 0-1h-.875V6H15.5a.5.5 0 0 0 .277-.916l-7.5-5zM12.375 6v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zM8 4a1 1 0 1 1 0-2 1 1 0 0 1 0 2zM.5 15a.5.5 0 0 0 0 1h15a.5.5 0 1 0 0-1H.5z"/>
-            </svg>
-            <span class="menu-title text-truncate" data-i18n="Menu Levels">Bill biến động</span></a>
-    </li>
-    <li class="nav-item"><a class="d-flex align-items-center" href="https://app.fakebill.org/bill/balance">
-            <svg
-                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="bi bi-bank2" viewbox="0 0 16 16">
-                <path
-                    d="M8.277.084a.5.5 0 0 0-.554 0l-7.5 5A.5.5 0 0 0 .5 6h1.875v7H1.5a.5.5 0 0 0 0 1h13a.5.5 0 1 0 0-1h-.875V6H15.5a.5.5 0 0 0 .277-.916l-7.5-5zM12.375 6v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zM8 4a1 1 0 1 1 0-2 1 1 0 0 1 0 2zM.5 15a.5.5 0 0 0 0 1h15a.5.5 0 1 0 0-1H.5z"/>
-            </svg>
-            <span class="menu-title text-truncate" data-i18n="Menu Levels">Bill số dư</span></a>
-    </li>
-    <li class="nav-item">
-        <a class="d-flex align-items-center" href="https://app.fakebill.org/bill/lock">
-            <svg
-                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="bi bi-bank2" viewbox="0 0 16 16">
-                <path
-                    d="M8.277.084a.5.5 0 0 0-.554 0l-7.5 5A.5.5 0 0 0 .5 6h1.875v7H1.5a.5.5 0 0 0 0 1h13a.5.5 0 1 0 0-1h-.875V6H15.5a.5.5 0 0 0 .277-.916l-7.5-5zM12.375 6v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zM8 4a1 1 0 1 1 0-2 1 1 0 0 1 0 2zM.5 15a.5.5 0 0 0 0 1h15a.5.5 0 1 0 0-1H.5z"/>
-            </svg>
-            <span class="menu-title text-truncate" data-i18n="Menu Levels">Bill màn hình</span>&nbsp;
-            <span style="padding: 0.2rem 0.4rem;font-size: 75%" class="fw-normal badge bg-danger d-none">mới</span>
-
-        </a>
-    </li>
-
-    <li class=" navigation-header"><span data-i18n="Menu khác">Menu KYC</span><i
-            data-feather="more-horizontal"></i></li>
-    <li class="nav-item"><a class="d-flex align-items-center" href="https://app.fakebill.org/kyc/cccd"><i
-                data-feather="credit-card"></i><span class="menu-title text-truncate"
-                                                     data-i18n="Menu Levels">CCCD/CC</span>
-            <span style="padding: 0.2rem 0.3rem; margin-left:0.2rem;font-size: 75%" class="fw-normal badge bg-danger ">Mới</span></a>
-    </li>
-    <li class="nav-item"><a class="d-flex align-items-center" href="https://app.fakebill.org/kyc/passport"><i
-                data-feather="credit-card"></i><span class="menu-title text-truncate"
-                                                     data-i18n="Menu Levels">Passport</span> <span
-                style="padding: 0.2rem 0.3rem; margin-left:0.2rem;font-size: 75%"
-                class="fw-normal badge bg-danger ">Mới</span></a>
-    </li>
-
-    <li class=" navigation-header"><span data-i18n="Menu khác">Menu Vé máy bay</span><i
-            data-feather="more-horizontal"></i></li>
-    <li class="nav-item"><a class="d-flex align-items-center" href="https://app.fakebill.org/tickets/vna"><i
-                data-feather="send"></i><span class="menu-title text-truncate"
-                                                     data-i18n="Menu Levels">Vietnam Airlines</span>
-            <span style="padding: 0.2rem 0.3rem; margin-left:0.2rem;font-size: 75%" class="fw-normal badge bg-danger ">Mới</span></a>
-    </li>
-    <li class="nav-item"><a class="d-flex align-items-center" href="https://app.fakebill.org/tickets/vja"><i
-                data-feather="send"></i><span class="menu-title text-truncate"
-                                                     data-i18n="Menu Levels">Vietjetair</span> <span
-                style="padding: 0.2rem 0.3rem; margin-left:0.2rem;font-size: 75%"
-                class="fw-normal badge bg-danger ">Mới</span></a>
-    </li>
-
-
-    <li class=" navigation-header"><span data-i18n="Menu khác">Menu khác</span><i
-            data-feather="more-horizontal"></i></li>
-    <li class="nav-item"><a class="d-flex align-items-center" href="https://app.fakebill.org/ref"><i
-                data-feather="share-2"></i><span class="menu-title text-truncate"
-                                                 data-i18n="Menu Levels">Liên kết giới thiệu</span></a>
-    </li>
-    <li class="nav-item"><a class="d-flex align-items-center" href="https://app.fakebill.org/faqs"><i
-                data-feather="info"></i><span class="menu-title text-truncate" data-i18n="Menu Levels">Câu
-                            hỏi thường gặp</span></a>
-    </li>
-    <li class="nav-item"><a class="d-flex align-items-center"
-                            href="https://t.me/emlinhjqk"><i
-                data-feather="info"></i><span class="menu-title text-truncate" data-i18n="Menu Levels">Hỗ trợ</span></a>
-    </li>
-</ul>
-    </div>
-</div>
-
-<div class="app-content content ">
-    <div class="content-overlay"></div>
-    <div class="header-navbar-shadow"></div>
-    <div class="content-wrapper container-xxl p-0">
-        <div class="content-header row">
-            <div class="content-header-left col-md-9 col-12 mb-2">
-                <div class="row breadcrumbs-top">
-                    <div class="col-12">
-                        <h2 class="content-header-title float-start mb-0">Dashboard</h2>
-                        <div class="breadcrumb-wrapper">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item">
-                                    <a href="https://app.fakebill.org">
-                                        Home
-                                    </a>
-                                </li>
-                                <li class="breadcrumb-item">
-                                    Tạo KYC CCCD                                </li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-            <div class="content-body">
-        <div class="row match-height">
-            <div class="col-md-8 col-12">
-                <div class="col-12">
-                    <div class="card bg-danger text-white mb-2">
-                        <div class="card-body">
-                            <p class="card-text">Nếu bạn có nhu cầu làm nhiều hãy đăng ký <a href="https://app.fakebill.org/account-packs" class="badge rounded-pill bg-warning draggable">gói
-                                    tài
-                                    khoản</a> để tiết kiệm hơn chi
-                                phí</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card bs-stepper horizontal-wizard-example">
-                    <div class="bs-stepper-header" role="tablist">
-
-                        <div class="step" data-target="#setup" role="tab" id="setup-trigger">
-                            <button type="button" class="step-trigger">
-                                <span class="bs-stepper-box d-none">2</span>
-                                <span class="bs-stepper-label">
-                                            <span class="bs-stepper-title">Cấu hình giao diện</span>
-                                            <span class="bs-stepper-subtitle">Cài đặt thông tin</span>
-                                        </span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="bs-stepper-content">
-
-                        <div id="setup" class="content" role="tabpanel" aria-labelledby="setup-trigger">
-                            <form>
-                                <input type="hidden" name="_token" value="683Xu8sUIVBrSqrRqsneqnF45qC1AV6ECxus9CHN" autocomplete="off">                                <div class="row">
-                                    <div class="mb-1 col-md-6 col-12">
-                                        <label class="form-label" for="cccd">Thẻ Căn Cước Công Dân (cũ)</label>
-                                        <div>
-                                            <div class="form-check form-check-inline">
-                                                <input checked class="form-check-input" type="radio" name="type" id="cccd" value="cccd">
-                                                <label class="form-check-label" for="cccd">CCCD</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mb-1 col-md-6 col-12">
-                                        <label class="form-label" for="cc">Thẻ Căn Cước (mới)</label>
-                                        <div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="type" id="cc" value="cc">
-                                                <label class="form-check-label" for="cc">Căn Cước</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-12">
-                                        <div class="mb-1">
-                                            <label class="form-label" for="name">Họ và tên trên CCCD/CC (Có dấu)</label>
-                                            <input type="text" id="name" class="form-control" required
-                                                   placeholder="Nhập họ và tên trên CCCD/CC" name="name">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-12">
-                                        <div class="mb-1">
-                                            <label class="form-label" for="sex">Giới tính</label>
-                                            <select required class="select2 form-select" name="sex" id="sex">
-                                                <option value="">Chọn giới tính</option>
-                                                <option value="Nam">Nam</option>
-                                                <option value="Nữ">Nữ</option>
-                                            </select>
-
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-12 mb-1">
-                                        <label class="form-label" for="avatar">Chọn ảnh thẻ(nền trắng)</label>
-                                        <div class="input-group">
-                                            <input required type="file" id="avatar" name="avatar" class="form-control" />
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-12 mb-1">
-                                        <label class="form-label" for=""></label>
-                                        <div class="input-group form-control-plaintext">
-                                            Hd:
-                                            <a href="https://taoanhdep.com/cong-cu-tao-anh-the-online/" target="_blank"  class="text-danger ps-1"> Ghép ảnh thẻ</a>
-                                            <a href="https://www.remove.bg/vi" target="_blank"  class="text-danger ps-1"> Xoá background</a>
-                                            <a href="https://app.fakebill.org/kyc/viduanhthe.png" target="_blank" class="text-success ps-1"> Ảnh mẫu</a>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-12">
-                                        <div class="mb-1">
-                                            <label class="form-label" for="dob">Ngày tháng năm sinh</label>
-                                            <input required type="text" id="dob" class="form-control flatpickr-date2"
-                                                   name="dob" placeholder="Nhập ngày cấp">
-                                        </div>
-                                    </div>
-                                    <div class="col-6 col-12 mb-1">
-                                        <div class="mb-1">
-                                            <label class="form-label" for="hometown">Quê quán (Xã,Huyện,Tỉnh)</label>
-                                            <input required type="text" id="hometown" class="form-control" name="hometown" placeholder="Nhập quê quán" aria-invalid="false">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-12">
-                                        <div class="mb-1">
-                                            <label class="form-label" for="cmnd">Số CMND (9 số)</label>
-                                            <input required type="text" id="cmnd" class="form-control"
-                                                   name="cmnd" placeholder="Nhập số CMND của bạn">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-12">
-                                        <div class="mb-1">
-                                            <label class="form-label" for="cccd">Số CCCD/CC (12 số)</label>
-                                                <input required type="text" id="cccd" class="form-control"
-                                                   name="cccd" placeholder="Nhập số CCCD/CC của bạn">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-12">
-                                        <div class="mb-1">
-                                            <label class="form-label" for="time">Ngày cấp</label>
-                                            <input required type="text" id="issued_date" class="form-control flatpickr-date2"
-                                                   name="issued_date" placeholder="Nhập ngày cấp">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-12">
-                                        <div class="mb-1">
-                                            <label class="form-label" for="date">Ngày hết hạn</label>
-                                            <input required type="text" id="expired_date" class="form-control flatpickr-date2"
-                                                   name="expired_date" placeholder="Nhập ngày hết hạn">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-12 mb-1">
-                                        <div class="mb-1">
-                                            <label class="form-label" for="address1">Thường trú (dòng 1)</label>
-                                            <input required type="text" id="address1" class="form-control" name="address1" placeholder="Nhập thường trú (dòng 1)" aria-invalid="false">
-                                        </div>
-                                    </div>
-                                    <div class="col-6 col-12 mb-1">
-                                        <div class="mb-1">
-                                            <label class="form-label" for="address2">Thường trú (dòng 2)</label>
-                                            <input required type="text" id="address2" class="form-control" name="address2" placeholder="Nhập thường trú (dòng 2)" aria-invalid="false">
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                            </form>
-                            <div >
-                                <button class="float-end btn btn-success btn-submit"><i data-feather="plus-circle"></i>
-                                    Tạo ảnh (10.000đ)</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-12">
-                <div class="card d-flex flex-column justify-content-evenly">
-                    <img class="img-fluid" src="../kyc/f_cccd.jpg"
-                         alt="Demo cccd">
-                    <img class="img-fluid" src="../kyc/b_cccd.jpg"
-                    alt="Demo cccd">
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-</div>
-
-<div class="sidenav-overlay"></div>
-<div class="drag-target"></div>
-
-<footer class="footer footer-static footer-light">
-    <p class="clearfix mb-0">
-        <span class="float-md-start d-block d-md-inline-block mt-25">
-            COPYRIGHT &copy; 2025
-            <a class="ms-25" href="/" target="_blank">Fake Bill - Hệ Thống Làm Giả Bill Ngân Hàng Việt Nam Uy Tín Tại FAKEBILL.ORG</a>
-            <span class="d-none d-sm-inline-block">, All rights Reserved</span>
-        </span>
-        <span class="float-md-end d-none d-md-block">
-            Tạo Bill chuyển khoản ngân hàng, bán giấy tờ KYC<i data-feather="heart"></i>
-        </span>
-    </p>
-</footer>
-<button class="btn btn-primary btn-icon scroll-top" type="button"><i data-feather="arrow-up"></i></button>
-
-<div class="modal fade" id="price-list" tabindex="-1" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-scrollable">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalCenterTitle">Bảng giá bill</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body table-responsive">
-                <ul class="nav nav-pills nav-fill">
-                    <li class="nav-item">
-                        <a class="nav-link active" id="home-tab-fill" data-bs-toggle="pill" href="#bill-transfer"
-                           aria-expanded="true">Chuyển khoản</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="profile-tab-fill" data-bs-toggle="pill" href="#bill-transaction"
-                           aria-expanded="false">Biến động</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="about-tab-fill" data-bs-toggle="pill" href="#bill-balance"
-                           aria-expanded="false">Số dư</a>
-                    </li>
-                </ul>
-                <div class="tab-content">
-                    <div role="tabpanel" class="tab-pane active" id="bill-transfer" aria-labelledby="home-tab-fill"
-                         aria-expanded="true">
-                        <div class="table-responsive">
-                            <table class="table table-bordered table-hover">
-                                <thead>
-                                <tr>
-                                    <th>STT</th>
-                                    <th>Tên bill</th>
-                                    <th>Giá tiền</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Vietcombank</td>
-                                    <td>5,000 VND/1 bill</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Tpbank</td>
-                                    <td>5,000 VND/1 bill</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Mbbank</td>
-                                    <td>5,000 VND/1 bill</td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>Techcombank</td>
-                                    <td>5,000 VND/1 bill</td>
-                                </tr>
-                                <tr>
-                                    <td>5</td>
-                                    <td>Acb</td>
-                                    <td>5,000 VND/1 bill</td>
-                                </tr>
-                                <tr>
-                                    <td>6</td>
-                                    <td>Vietinbank</td>
-                                    <td>5,000 VND/1 bill</td>
-                                </tr>
-                                <tr>
-                                    <td>7</td>
-                                    <td>Bidv</td>
-                                    <td>5,000 VND/1 bill</td>
-                                </tr>
-                                <tr>
-                                    <td>8</td>
-                                    <td>Agribank</td>
-                                    <td>5,000 VND/1 bill</td>
-                                </tr>
-                                <tr>
-                                    <td>9</td>
-                                    <td>Vpbank</td>
-                                    <td>5,000 VND/1 bill</td>
-                                </tr>
-                                <tr>
-                                    <td>10</td>
-                                    <td>Momo</td>
-                                    <td>5,000 VND/1 bill</td>
-                                </tr>
-                                <tr>
-                                    <td>11</td>
-                                    <td>Sacombank</td>
-                                    <td>5,000 VND/1 bill</td>
-                                </tr>
-                                <tr>
-                                    <td>12</td>
-                                    <td>Msb</td>
-                                    <td>5,000 VND/1 bill</td>
-                                </tr>
-                                <tr>
-                                    <td>13</td>
-                                    <td>Ocb</td>
-                                    <td>5,000 VND/1 bill</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="tab-pane" id="bill-transaction" role="tabpanel" aria-labelledby="profile-tab-fill"
-                         aria-expanded="false">
-                        <div class="table-responsive">
-                            <table class="table table-bordered table-hover">
-                                <thead>
-                                <tr>
-                                    <th>STT</th>
-                                    <th>Tên bill</th>
-                                    <th>Giá tiền</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Vietcombank</td>
-                                    <td>5,000 VND/1 bill</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Techcombank</td>
-                                    <td>5,000 VND/1 bill</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Tpbank</td>
-                                    <td>5,000 VND/1 bill</td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>Acb</td>
-                                    <td>5,000 VND/1 bill</td>
-                                </tr>
-                                <tr>
-                                    <td>5</td>
-                                    <td>Mbbank</td>
-                                    <td>5,000 VND/1 bill</td>
-                                </tr>
-                                <tr>
-                                    <td>6</td>
-                                    <td>Momo</td>
-                                    <td>5,000 VND/1 bill</td>
-                                </tr>
-                                <tr>
-                                    <td>7</td>
-                                    <td>Vietinbank</td>
-                                    <td>5,000 VND/1 bill</td>
-                                </tr>
-                                <tr>
-                                    <td>8</td>
-                                    <td>Agribank</td>
-                                    <td>5,000 VND/1 bill</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="tab-pane" id="bill-balance" role="tabpanel" aria-labelledby="about-tab-fill"
-                         aria-expanded="false">
-                        <div class="table-responsive">
-                            <table class="table table-bordered table-hover">
-                                <thead>
-                                <tr>
-                                    <th>STT</th>
-                                    <th>Tên bill</th>
-                                    <th>Giá tiền</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Vietcombank</td>
-                                    <td>5,000 VND/1 bill</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Mbbank</td>
-                                    <td>5,000 VND/1 bill</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Vietinbank</td>
-                                    <td>5,000 VND/1 bill</td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>Tpbank</td>
-                                    <td>5,000 VND/1 bill</td>
-                                </tr>
-                                <tr>
-                                    <td>5</td>
-                                    <td>Vpbank</td>
-                                    <td>5,000 VND/1 bill</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Đóng</button>
-            </div>
-        </div>
-    </div>
-</div>
-<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    
 <script>
-    //initial setup ajax header csrf
-    $.ajaxSetup({
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        },
-        beforeSend: function (xhr)
-        {
-        },
-        complete: function (xhr)
-        {
+        if (localStorage.getItem('sidebar-expanded') == 'true') {
+            document.querySelector('body').classList.add('sidebar-expanded');
+        } else {
+            document.querySelector('body').classList.remove('sidebar-expanded');
+        }
+    </script>
+<script src='https://www.google.com/recaptcha/api.js?hl=vi'></script>
+
+    <!-- Page wrapper -->
+    <div class="flex h-[100dvh] overflow-hidden">
+
+        <!-- Sidebar -->
+        <div class="min-w-fit">
+            <!-- Sidebar backdrop (mobile only) -->
+            <div class="fixed inset-0 bg-slate-900 bg-opacity-30 z-40 lg:hidden lg:z-auto transition-opacity duration-200" :class="sidebarOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'" aria-hidden="true" x-cloak></div>
+        
+            <!-- Sidebar -->
+            <div id="sidebar" class="flex flex-col absolute z-40 left-0 top-0 lg:static lg:left-auto lg:top-auto lg:translate-x-0 h-[100dvh] overflow-y-scroll lg:overflow-y-auto no-scrollbar w-64 lg:w-20 lg:sidebar-expanded:!w-64 2xl:!w-64 shrink-0 bg-slate-800 p-4 transition-all duration-200 ease-in-out" :class="sidebarOpen ? 'translate-x-0' : '-translate-x-64'" @click.outside="sidebarOpen = false" @keydown.escape.window="sidebarOpen = false" x-cloak="lg">
+        
+                <!-- Sidebar header -->
+                <div class="flex justify-between mb-10 pr-3 sm:px-2">
+                    <!-- Close button -->
+                    <button class="lg:hidden text-slate-500 hover:text-slate-400" @click.stop="sidebarOpen = !sidebarOpen" aria-controls="sidebar" :aria-expanded="sidebarOpen">
+                        <span class="sr-only">Close sidebar</span>
+                        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.7 18.7l1.4-1.4L7.8 13H20v-2H7.8l4.3-4.3-1.4-1.4L4 12z" />
+                        </svg>
+                    </button>
+                    <!-- Logo -->
+<a href="/">
+  <img src="/logoquocanh.gif" alt="Trang chủ" class="h-18 w-auto" />
+</a>
+
+                </div>
+        
+                <!-- Links -->
+                <div class="space-y-8">
+                    <!-- Pages group -->
+                    <div>
+                  
+                        <ul class="">
+                            <!-- Dashboard -->
+             <li class="px-3 py-2 rounded-sm mb-0.5 last:mb-0">
+                                <a class="block text-slate-200 hover:text-white truncate transition duration-150" href="https://web.quocanh.ceo/">
+                                    <div class="flex items-center">
+                                        <img class="w-5 h-5" src="/icon_banks/home.png" width="24" height="24" alt="Trang chủ">
+                                        <span class="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Trang chủ</span>
+                                    </div>
+                                </a>
+                            </li>
+               <li class="px-3 py-2 rounded-sm mb-0.5 last:mb-0">
+                                <a class="block text-slate-200 hover:text-white truncate transition duration-150" href="tao-bill-chuyen-tien">
+                                    <div class="flex items-center">
+                                        <img class="w-5 h-5" src="/icon_banks/bankvip.png" width="24" height="24" alt="Công cụ fake bill chuyển khoản">
+                                        <span class="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Fake bill chuyển khoản</span>
+                                    </div>
+                                </a>
+                            </li>
+                             
+                <li class="px-3 py-2 rounded-sm mb-0.5 last:mb-0">
+                                <a class="block text-slate-200 hover:text-white truncate transition duration-150" href="tao-bill-chuyen-tienpri">
+                                    <div class="flex items-center">
+                                        <img class="w-5 h-5" src="/icon_banks/banklogopri.svg" width="24" height="24" alt="Công cụ fake bill chuyển khoản">
+                                        <span class="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Fake bill Priority</span>
+                                    </div>
+                                </a>
+                            </li>  
+                              <li class="px-3 py-2 rounded-sm mb-0.5 last:mb-0">
+                                <a class="block text-slate-200 hover:text-white truncate transition duration-150" href="tao-bill-chuyen-tienusd">
+                                    <div class="flex items-center">
+                                        <img class="w-5 h-5" src="/icon_banks/usdt.png" width="24" height="24" alt="Công cụ fake bill chuyển khoản">
+                                        <span class="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Fake bill USDT</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="px-3 py-2 rounded-sm mb-0.5 last:mb-0">
+                                <a class="block text-slate-200 hover:text-white truncate transition duration-150" href="tao-han-muc-gd">
+                                    <div class="flex items-center">
+                                       <img class="w-5 h-5" src="https://web.quocanh.ceo/icon_banks/hm.png"/>
+                                        <span class="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Fake Hạn Mức Giao Dịch</span>
+                                    </div>
+                                </a></li>
+                            <li class="px-3 py-2 rounded-sm mb-0.5 last:mb-0">
+                                <a class="block text-slate-200 hover:text-white truncate transition duration-150" href="tao-bien-dong-so-du">
+                                    <div class="flex items-center">
+                                       <img class="w-5 h-5" src="https://web.quocanh.ceo/icon_banks/bank-bdsd.png"/>
+                                        <span class="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Fake biến động số dư</span>
+                                    </div>
+                                </a></li>
+                                  <li class="px-3 py-2 rounded-sm mb-0.5 last:mb-0">
+                                <a class="block text-slate-200 hover:text-white truncate transition duration-150" href="tao-so-du">
+                                    <div class="flex items-center">
+                                       <img class="w-5 h-5" src="https://web.quocanh.ceo/icon_banks/banksodu.png"/>
+                                        <span class="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Fake số dư tài khoản</span>
+                                    </div>
+                                    </a></li>
+                                  <li class="px-3 py-2 rounded-sm mb-0.5 last:mb-0">
+                                <a class="block text-slate-200 hover:text-white truncate transition duration-150" href="bankao">
+                                    <div class="flex items-center">
+                                       <img class="w-5 h-5" src="https://web.quocanh.ceo/images/bankao.png"/>
+                                        <span class="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Thuê Bank Ảo</span>
+                                    </div>
+                                    </a></li>
+                                <!--  <li class="px-3 py-2 rounded-sm mb-0.5 last:mb-0">-->
+                                <!--<a class="block text-slate-200 hover:text-white truncate transition duration-150" href="taibank">-->
+                                <!--    <div class="flex items-center">-->
+                                <!--       <img class="w-5 h-5" src="https://web.quocanh.ceo/images/taibank.png"/>-->
+                                <!--        <span class="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Tải App Bank Ảo</span>-->
+                                <!--    </div>-->
+                                <!--    </a></li>-->
+                                     <li class="px-3 py-2 rounded-sm mb-0.5 last:mb-0">
+                                <a class="block text-slate-200 hover:text-white truncate transition duration-150" href="tao-thong-bao-so-du">
+                                    <div class="flex items-center">
+                                       <img class="w-5 h-5" src="https://web.quocanh.ceo/tbsd-icon.png"/>
+                                        <span class="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Fake thông báo số dư</span>
+                                    </div>
+                                    </a></li>
+                                  <li class="px-3 py-2 rounded-sm mb-0.5 last:mb-0">
+                                <a class="block text-slate-200 hover:text-white truncate transition duration-150" href="ve-may-bay">
+                                    <div class="flex items-center">
+                                       <img class="w-5 h-5" src="https://web.quocanh.ceo/icon_banks/vemb.png"/>
+                                        <span class="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Fake Vé Máy Bay</span>
+                                    </div>
+                                </a></li>
+                                  <li class="px-3 py-2 rounded-sm mb-0.5 last:mb-0">
+                                <a class="block text-slate-200 hover:text-white truncate transition duration-150" href="giay-to">
+                                    <div class="flex items-center">
+                                       <img class="w-5 h-5" src="https://web.quocanh.ceo/icon_banks/cccd-logo.jpg"/>
+                                        <span class="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Fake Giấy Tờ</span>
+                                    </div>
+                                    </a></li>
+                                 <li class="px-3 py-2 rounded-sm mb-0.5 last:mb-0">
+                                <a class="block text-slate-200 hover:text-white truncate transition duration-150" href="create-qr-cccd">
+                                    <div class="flex items-center">
+                                       <img class="w-5 h-5" src="https://web.quocanh.ceo/icon_banks/qr-cccd.png"/>
+                                        <span class="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Tool Tạo QR CCCD Free</span>
+                                    </div>
+                                </a></li>
+                            <li class="px-3 py-2 rounded-sm mb-0.5 last:mb-0">
+                                <a class="block text-slate-200 hover:text-white truncate transition duration-150" href="/fake-noti">
+                                    <div class="flex items-center">
+                                        <img class="w-5 h-5" src="https://web.quocanh.ceo/icon_banks/iphone.png" width="24" height="24" alt="Fakebill Ver2">
+                                        <span class="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Fake thông báo màn hinh</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <!--<li class="px-3 py-2 rounded-sm mb-0.5 last:mb-0">-->
+                            <!--    <a class="block text-slate-200 hover:text-white truncate transition duration-150" href="/bankinfo">-->
+                            <!--        <div class="flex items-center">-->
+                            <!--            <img class="w-5 h-5" src="https://web.quocanh.ceo/icon_banks/find.png" width="24" height="24" alt="bankinfo">-->
+                            <!--            <span class="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Check Stk Ngân Hàng</span>-->
+                            <!--        </div>-->
+                            <!--    </a>-->
+                            <!--</li>-->
+                            <li class="px-3 py-2 rounded-sm mb-0.5 last:mb-0">
+                                <a class="block text-slate-200 hover:text-white truncate transition duration-150" href="/shops">
+                                    <div class="flex items-center">
+                                        <img class="w-5 h-5" src="https://web.quocanh.ceo/icon_banks/shops.png" width="24" height="24" alt="shops">
+                                        <span class="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Shop Tài Nguyên</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <!--<li class="px-3 py-2 rounded-sm mb-0.5 last:mb-0">-->
+                            <!--    <a class="block text-slate-200 hover:text-white truncate transition duration-150" href="/deposit">-->
+                            <!--        <div class="flex items-center">-->
+                            <!--            <img class="w-5 h-5" src="https://web.quocanh.ceo/icon_banks/kiemtien.png" width="24" height="24" alt="Kiếm Tiền">-->
+                            <!--            <span class="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Kiếm Tiền</span>-->
+                            <!--        </div>-->
+                            <!--    </a>-->
+                            <!--</li>-->
+                            <!--<li class="px-3 py-2 rounded-sm mb-0.5 last:mb-0">-->
+                            <!--    <a class="block text-slate-200 hover:text-white truncate transition duration-150" href="/boctham">-->
+                            <!--        <div class="flex items-center">-->
+                            <!--            <img class="w-5 h-5" src="https://web.quocanh.ceo/icon_banks/boxgif.png" width="24" height="24" alt="Mở Hộp">-->
+                            <!--            <span class="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Mở Hộp May Mắn</span>-->
+                            <!--        </div>-->
+                            <!--    </a>-->
+                            <!--</li>-->
+               
+                            <!-- Community -->
+              
+                            <!-- Calendar -->
+                            <li class="px-3 py-2 rounded-sm mb-0.5 last:mb-0">
+                                <a class="block text-slate-200 hover:text-white truncate transition duration-150" href="payment">
+                                    <div class="flex items-center">
+                                       <img class="w-5 h-5" src="https://web.quocanh.ceo/icon_banks/profits.svg"/>
+                                        <span class="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Nạp tiền</span>
+                                    </div>
+                                </a>
+                            </li>
+                             <li class="px-3 py-2 rounded-sm mb-0.5 last:mb-0">
+                                <a class="block text-slate-200 hover:text-white truncate transition duration-150" href="lichsu-bill">
+                                    <div class="flex items-center">
+                                       <img class="w-5 h-5" src="https://web.quocanh.ceo/icon_banks/lsgd.png"/>
+                                        <span class="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Lịch Sử Fake Bill</span>
+                                    </div>
+                                </a>
+                            </li>
+                             <li class="px-3 py-2 rounded-sm mb-0.5 last:mb-0">
+                                <a class="block text-slate-200 hover:text-white truncate transition duration-150" href="plans">
+                                    <div class="flex items-center">
+                                       <img class="w-5 h-5" src="/icon_banks/vip.png"/>
+                                        <span class="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Thuê gói & Tiết Kiệm</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <!-- Campaigns -->
+                           <noscript>      <li class="px-3 py-2 rounded-sm mb-0.5 last:mb-0">
+                                <a class="block text-slate-200 hover:text-white truncate transition duration-150" href="campaigns.html">
+                                    <div class="flex items-center">
+                                        <svg class="shrink-0 h-6 w-6" viewBox="0 0 24 24">
+                                            <path class="fill-current text-slate-600" d="M20 7a.75.75 0 01-.75-.75 1.5 1.5 0 00-1.5-1.5.75.75 0 110-1.5 1.5 1.5 0 001.5-1.5.75.75 0 111.5 0 1.5 1.5 0 001.5 1.5.75.75 0 110 1.5 1.5 1.5 0 00-1.5 1.5A.75.75 0 0120 7zM4 23a.75.75 0 01-.75-.75 1.5 1.5 0 00-1.5-1.5.75.75 0 110-1.5 1.5 1.5 0 001.5-1.5.75.75 0 111.5 0 1.5 1.5 0 001.5 1.5.75.75 0 110 1.5 1.5 1.5 0 00-1.5 1.5A.75.75 0 014 23z" />
+                                            <path class="fill-current text-slate-400" d="M17 23a1 1 0 01-1-1 4 4 0 00-4-4 1 1 0 010-2 4 4 0 004-4 1 1 0 012 0 4 4 0 004 4 1 1 0 010 2 4 4 0 00-4 4 1 1 0 01-1 1zM7 13a1 1 0 01-1-1 4 4 0 00-4-4 1 1 0 110-2 4 4 0 004-4 1 1 0 112 0 4 4 0 004 4 1 1 0 010 2 4 4 0 00-4 4 1 1 0 01-1 1z" />
+                                        </svg>
+                                        <span class="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Tạo SMS Banking</span>
+                                    </div>
+                                </a>
+                            </li>
+                          <li class="px-3 py-2 rounded-sm mb-0.5 last:mb-0">
+                                <a class="block text-slate-200 hover:text-white truncate transition duration-150" href="campaigns.html">
+                                    <div class="flex items-center">
+                                        <svg class="shrink-0 h-6 w-6" viewBox="0 0 24 24">
+                                            <path class="fill-current text-slate-600" d="M20 7a.75.75 0 01-.75-.75 1.5 1.5 0 00-1.5-1.5.75.75 0 110-1.5 1.5 1.5 0 001.5-1.5.75.75 0 111.5 0 1.5 1.5 0 001.5 1.5.75.75 0 110 1.5 1.5 1.5 0 00-1.5 1.5A.75.75 0 0120 7zM4 23a.75.75 0 01-.75-.75 1.5 1.5 0 00-1.5-1.5.75.75 0 110-1.5 1.5 1.5 0 001.5-1.5.75.75 0 111.5 0 1.5 1.5 0 001.5 1.5.75.75 0 110 1.5 1.5 1.5 0 00-1.5 1.5A.75.75 0 014 23z" />
+                                            <path class="fill-current text-slate-400" d="M17 23a1 1 0 01-1-1 4 4 0 00-4-4 1 1 0 010-2 4 4 0 004-4 1 1 0 012 0 4 4 0 004 4 1 1 0 010 2 4 4 0 00-4 4 1 1 0 01-1 1zM7 13a1 1 0 01-1-1 4 4 0 00-4-4 1 1 0 110-2 4 4 0 004-4 1 1 0 112 0 4 4 0 004 4 1 1 0 010 2 4 4 0 00-4 4 1 1 0 01-1 1z" />
+                                        </svg>
+                                        <span class="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">SMS màn hình khóa</span>
+                                    </div>
+                                </a>
+                            </li></noscript>
+                        
+                        </ul>
+                    </div>
+                    <!-- More group -->
+                    <div>
+                        <h3 class="text-xs uppercase text-slate-500 font-semibold pl-3">
+                            <span class="hidden lg:block lg:sidebar-expanded:hidden 2xl:hidden text-center w-6" aria-hidden="true">•••</span>
+                           
+                        </h3>
+                        <ul class="mt-3">
+                            <!-- Authentication -->
+                            <!-- Onboarding -->
+                            <div class="lg:hidden lg:sidebar-expanded:block 2xl:block">
+                                    <ul class="pl-9 mt-1 hidden" :class="open ? '!block' : 'hidden'">
+                                        
+                                </a>
+                            </li>
+                                  
+                                     
+                                    </ul>
+                                </div>
+                            </li>
+                        
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- Expand / collapse button -->
+                <div class="pt-3 hidden lg:inline-flex 2xl:hidden justify-end mt-auto">
+                    <div class="px-3 py-2">
+                        <button @click="sidebarExpanded = !sidebarExpanded">
+                            <span class="sr-only">Expand / collapse sidebar</span>
+                            <svg class="w-6 h-6 fill-current sidebar-expanded:rotate-180" viewBox="0 0 24 24">
+                                <path class="text-slate-400" d="M19.586 11l-5-5L16 4.586 23.414 12 16 19.414 14.586 18l5-5H7v-2z" />
+                                <path class="text-slate-600" d="M3 23H1V1h2z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+
+        <!-- Content area -->
+        <div class="bg-white relative flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
+
+            <!-- Site header -->
+            <header class="sticky top-0 bg-white dark:bg-[#182235] border-b border-slate-200 dark:border-slate-700 z-30">
+                <div class="px-4 sm:px-6 lg:px-8">
+                    <div class="flex items-center justify-between h-16 -mb-px">
+
+                        <!-- Header: Left side -->
+                        <div class="flex">
+                            <!-- Hamburger button -->
+                            <button
+                                class="text-slate-500 hover:text-slate-600 lg:hidden"
+                                @click.stop="sidebarOpen = !sidebarOpen"
+                                aria-controls="sidebar"
+                                :aria-expanded="sidebarOpen"
+                            >
+                                <span class="sr-only">Open sidebar</span>
+                                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="4" y="5" width="16" height="2" />
+                                    <rect x="4" y="11" width="16" height="2" />
+                                    <rect x="4" y="17" width="16" height="2" />
+                                </svg>
+                            </button>
+
+                        </div>
+
+                        <!-- Header: Right side -->
+                        <div class="flex items-center space-x-3">
+<a href="/" class="btn dark:bg-slate-800 border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600 text-slate-600 dark:text-slate-300">
+                                           
+                                             <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Trang Chủ</span>
+                            <!-- Search button -->
+                   <a href="payment" class="btn dark:bg-slate-800 border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600 text-slate-600 dark:text-slate-300">
+            <span>Nạp tiền: 2,000đ</span>
+          </a>
+
+                            <!-- Divider -->
+                            <hr class="w-px h-6 bg-slate-200 dark:bg-slate-700 border-none" />
+
+                             <!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="vi">
+    <script src="/js/topup-notify.js" defer></script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nút Cá Nhân</title>
+    
+    <!-- Link Tailwind CSS -->
+    <!script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex justify-center items-center h-screen">
+
+<div>
+            <!-- Nút Cá Nhân (khi đã đăng nhập) -->
+        <div class="relative group inline-block">
+            <button id="dropdownButton" class="bg-rose-500 hover:bg-rose-600 text-white px-4 py-2 rounded">
+                Cá nhân
+            </button>
+
+            <!-- Dropdown Menu -->
+            <div id="dropdownMenu" class="hidden absolute right-0 mt-3 w-48 bg-white border border-gray-200 rounded shadow-lg w-max	" style="width:max-content">
+                <a href="/doimatkhau.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Đổi Mật Khẩu</a>
+                 <a href="/email" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Thêm / Đổi Email</a> <!-- ✅ Nút thêm email -->
+                <a href="/pass2.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Tạo Mật Khẩu Cấp 2</a>
+                <a href="/logout.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Đăng Xuất</a>
+            </div>
+        </div>
+    </div>
+
+<!-- JavaScript -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const dropdownButton = document.getElementById("dropdownButton");
+        const dropdownMenu = document.getElementById("dropdownMenu");
+
+        if (dropdownButton) {
+            dropdownButton.addEventListener("click", function () {
+                dropdownMenu.classList.toggle("hidden");
+            });
+
+            // Ẩn dropdown khi bấm ngoài
+            document.addEventListener("click", function (event) {
+                if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                    dropdownMenu.classList.add("hidden");
+                }
+            });
         }
     });
 </script>
-<script src="vendors/js/vendors.min.js" type="text/javascript"></script>
-
-<script src="vendors/js/extensions/sweetalert2.all.min.js" type="text/javascript"></script>
-<script src="vendors/js/extensions/toastr.min.js" type="text/javascript"></script>
-<script src="vendors/js/forms/validation/jquery.validate.min.js" type="text/javascript"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/additional-methods.js" type="text/javascript"></script>
-<script src="vendors/js/forms/select/select2.full.min.js" type="text/javascript"></script>
-
-
-<script src="js/core/app-menu.js" type="text/javascript"></script>
-<script src="js/core/app.js" type="text/javascript"></script>
-
-
-
-<script src="js/scripts.js" type="text/javascript" defer></script>
-    <script src="vendors/js/pickers/flatpickr/flatpickr.min.js"
-            type="text/javascript"></script>
-    <script src="vendors/js/forms/wizard/bs-stepper.min.js"
-            type="text/javascript"></script>
-    <script src="vendors/js/forms/repeater/jquery.repeater.min.js"
-            type="text/javascript"></script>
-    <script type="text/javascript">
-        function touchspin(min, max) {
-            let touchspinValue = $('.touchspin-min-max');
-            if (touchspinValue.length > 0) {
-                touchspinValue
-                    .TouchSpin({
-                        min: min,
-                        max: max,
-                        buttondown_txt: feather.icons['minus'].toSvg(),
-                        buttonup_txt: feather.icons['plus'].toSvg()
-                    })
-                    .on('touchspin.on.startdownspin', function() {
-                        var $this = $(this);
-                        $('.bootstrap-touchspin-up').removeClass('disabled-max-min');
-                        if ($this.val() == min) {
-                            $(this).siblings().find('.bootstrap-touchspin-down').addClass('disabled-max-min');
-                        }
-                    })
-                    .on('touchspin.on.startupspin', function() {
-                        var $this = $(this);
-                        $('.bootstrap-touchspin-down').removeClass('disabled-max-min');
-                        if ($this.val() == max) {
-                            $(this).siblings().find('.bootstrap-touchspin-up').addClass('disabled-max-min');
-                        }
-                    });
-            }
-        }
-
-        function getWifi() {
-            let network = $('input[name="network"]:checked').val();
-            if (network == 'wifi') {
-                $('#wifi').parent().after(
-                    `<div class="form-check-inline touchspin" style="margin-left:-10px;"><div class="input-group input-group-sm"><input type="number" class="touchspin-min-max" name="options[wave_wifi]" value="3" /></div></div>`
-                );
-                touchspin(0, 3);
-            } else {
-                $('.touchspin').remove();
-            }
-        }
-
-        function getSim() {
-            let sim = $('input[name="sim"]:checked').val();
-            if (sim == 'sim1') {
-                $('.touchspin2').remove();
-                if ($('.touchspin1').length === 0) {
-                    $('#sim1').parent().after(
-                        `<div class="form-check-inline touchspin1" style="margin-left:-10px;"><div class="input-group input-group-sm"><input type="number" class="touchspin-min-max" name="options[wave_sim1]" value="4" /></div></div>`
-                    );
-                    touchspin(0, 4);
-                }
-            } else {
-                $('#sim2').parent().after(
-                    `<div class="form-check-inline touchspin2" style="margin-left:-10px;"><div class="input-group input-group-sm"><input type="number" class="touchspin-min-max" name="options[wave_sim2]" value="4" /></div></div>`
-                );
-                touchspin(0, 4);
-            }
-        }
-        getWifi();
-        getSim();
-        $('input[name="network"]').on('change', getWifi);
-        $('input[name="sim"]').on('change', getSim);
-        var value = $('.badge.rounded-pill.bg-danger.draggable').text(),
-            text = $('.badge.rounded-pill.bg-danger.draggable').siblings('.form-label').text();
-        $('#trials').on('change', function() {
-            $('.modal').modal('hide');
-            let $this = $(this);
-            if ($this.is(':checked')) {
-                Swal.fire({
-                    title: 'Cảnh báo!',
-                    text: "Khi tích vào tạo thử bạn sẽ bị dính bản quyền khi tạo bill.",
-                    icon: 'warning',
-                    showCancelButton: true,
-                    confirmButtonText: 'Vâng, tôi muốn tạo thử',
-                    cancelButtonText: 'Hủy',
-                    customClass: {
-                        confirmButton: 'btn btn-primary',
-                        cancelButton: 'btn btn-outline-danger ms-1'
-                    },
-                    buttonsStyling: false
-                }).then(function(result) {
-                    if (result.value) {
-                        $('.badge.rounded-pill.bg-danger.draggable').text('0 VND');
-                        $('.badge.rounded-pill.bg-danger.draggable').siblings('.form-label')
-                            .text('Thành tiền:');
-                    } else {
-                        $('#trials').prop('checked', false);
-                    }
-                });
-            } else {
-                $('.badge.rounded-pill.bg-danger.draggable').text(value);
-                $('.badge.rounded-pill.bg-danger.draggable').siblings('.form-label')
-                    .text(text)
-            }
-        });
-        var horizontalWizard = document.querySelector('.horizontal-wizard-example');
-        if (typeof horizontalWizard !== undefined && horizontalWizard !== null) {
-            var numberedStepper = new Stepper(horizontalWizard),
-                form = $(horizontalWizard).find('form');
-            form.each(function() {
-                var $this = $(this);
-                $this.validate({
-                    rules: {
-                        money: {
-                            required: true,
-                            number: true,
-                        },
-                        time: {
-                            required: true,
-                        },
-                        date: {
-                            required: true,
-                        },
-                        name_account: {
-                            required: true,
-                        },
-                        number_account: {
-                            required: true,
-                        },
-                        avatar: {
-                            required: true,
-                            extension: "png|jpeg|jpg",
-                        },
-                        // background: {
-                        //     required: true,
-                        // },
-                        // display: {
-                        //     required: true,
-                        // },
-                        network: {
-                            required: true,
-                        },
-                        sim: {
-                            required: true,
-                        },
-                        pin: {
-                            required: true,
-                            min: 1,
-                            max: 100,
-                        },
-                    },
-                    messages: {
-                        money: {
-                            required: "Vui lòng nhập số tiền",
-                            number: "Số tiền bạn nhập không đúng định dạng",
-                        },
-                        date: {
-                            required: "Vui lòng chọn ngày",
-                        },
-                        time: {
-                            required: "Vui lòng chọn giờ",
-                        },
-                        name_account: {
-                            required: "Vui lòng nhập tên người nhận",
-                        },
-                        number_account: {
-                            required: "Vui lòng nhập số tài khoản người nhận",
-                        },
-                        background: {
-                            required: "Vui lòng chọn hình nền",
-                        },
-                        avatar: {
-                            required: "Vui lòng tải lên hình nền điện thoại của bạn",
-                            extension: "Vui lòng chọn file có định dạng png, jpeg hoặc jpg",
-                        },
-                        display: {
-                            required: "Vui lòng chọn giao diện",
-                        },
-                        network: {
-                            required: "Vui lòng chọn mạng",
-                        },
-                        sim: {
-                            required: "Vui lòng chọn sim",
-                        },
-                        pin: {
-                            required: "Vui lòng điền phần trăm pin",
-                            min: "Không được nhập giá trị nhỏ hơn 1",
-                            max: "Không được nhập giá trị lớn hơn 100",
-                        },
-                    },
-                });
-            });
-
-            $(horizontalWizard)
-                .find('.btn-next')
-                .each(function() {
-                    $(this).on('click', function(e) {
-                        var isValid = $(this).parent().siblings('form').valid();
-                        if (isValid) {
-                            numberedStepper.next();
-                        } else {
-                            e.preventDefault();
-                        }
-                    });
-                });
-
-            $(horizontalWizard)
-                .find('.btn-prev')
-                .on('click', function() {
-                    numberedStepper.previous();
-                });
-
-            $(horizontalWizard)
-                .find('.btn-submit')
-                .on('click', function() {
-                    var isValid = $(this).parent().siblings('form').valid();
-                    if (isValid) {
-
-                        $(".content-body").html(
-                            `<div class=text-center> <div class=checkmark><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; display: block; shape-rendering: auto" width="100px" height="100px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
-      <g transform="rotate(0 50 50)">
-        <rect x="45" y="15" rx="4.8" ry="4.8" width="10" height="10" fill="#348cd4">
-          <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.9s" repeatCount="indefinite"></animate>
-        </rect>
-      </g><g transform="rotate(36 50 50)">
-        <rect x="45" y="15" rx="4.8" ry="4.8" width="10" height="10" fill="#348cd4">
-          <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.8s" repeatCount="indefinite"></animate>
-        </rect>
-      </g><g transform="rotate(72 50 50)">
-        <rect x="45" y="15" rx="4.8" ry="4.8" width="10" height="10" fill="#348cd4">
-          <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.7s" repeatCount="indefinite"></animate>
-        </rect>
-      </g><g transform="rotate(108 50 50)">
-        <rect x="45" y="15" rx="4.8" ry="4.8" width="10" height="10" fill="#348cd4">
-          <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.6s" repeatCount="indefinite"></animate>
-        </rect>
-      </g><g transform="rotate(144 50 50)">
-        <rect x="45" y="15" rx="4.8" ry="4.8" width="10" height="10" fill="#348cd4">
-          <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.5s" repeatCount="indefinite"></animate>
-        </rect>
-      </g><g transform="rotate(180 50 50)">
-        <rect x="45" y="15" rx="4.8" ry="4.8" width="10" height="10" fill="#348cd4">
-          <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.4s" repeatCount="indefinite"></animate>
-        </rect>
-      </g><g transform="rotate(216 50 50)">
-        <rect x="45" y="15" rx="4.8" ry="4.8" width="10" height="10" fill="#348cd4">
-          <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.3s" repeatCount="indefinite"></animate>
-        </rect>
-      </g><g transform="rotate(252 50 50)">
-        <rect x="45" y="15" rx="4.8" ry="4.8" width="10" height="10" fill="#348cd4">
-          <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.2s" repeatCount="indefinite"></animate>
-        </rect>
-      </g><g transform="rotate(288 50 50)">
-        <rect x="45" y="15" rx="4.8" ry="4.8" width="10" height="10" fill="#348cd4">
-          <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.1s" repeatCount="indefinite"></animate>
-        </rect>
-      </g><g transform="rotate(324 50 50)">
-        <rect x="45" y="15" rx="4.8" ry="4.8" width="10" height="10" fill="#348cd4">
-          <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="0s" repeatCount="indefinite"></animate>
-        </rect>
-      </g>
-      </svg></div> <h4>Đang Tạo ảnh (10.000đ) nè...</h4> </div>`
-                        );
-                        let data_1 = new FormData(form[0]);
-                        let data_2 = new FormData(form[1]);
-                        for (var pair of data_2.entries()) {
-                            data_1.append(pair[0], pair[1]);
-                        }
-                        $.ajax({
-                            url: 'http://app.fakebill.org/kyc/cccd',
-                            type: 'POST',
-                            dataType: "json",
-                            data: data_1,
-                            processData: false,
-                            contentType: false,
-                            success: function(response) {
-                                if (response.icon == "success") {
-                                console.log(response.link);
-                                    $(".content-body").html(
-                                        `<div class="d-flex justify-content-center"><div class="text-center col-md-6"> <div class=checkmark> <svg version="1.1" id=Layer_1 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x=0px y=0px viewBox="0 0 161.2 161.2" enable-background="new 0 0 161.2 161.2" xml:space=preserve> <path class=path fill=none stroke="#32c861" stroke-miterlimit=10 d="M425.9,52.1L425.9,52.1c-2.2-2.6-6-2.6-8.3-0.1l-42.7,46.2l-14.3-16.4 c-2.3-2.7-6.2-2.7-8.6-0.1c-1.9,2.1-2,5.6-0.1,7.7l17.6,20.3c0.2,0.3,0.4,0.6,0.6,0.9c1.8,2,4.4,2.5,6.6,1.4c0.7-0.3,1.4-0.8,2-1.5 c0.3-0.3,0.5-0.6,0.7-0.9l46.3-50.1C427.7,57.5,427.7,54.2,425.9,52.1z"></path> <circle class=path fill=none stroke="#32c861" stroke-width=4 stroke-miterlimit=10 cx="80.6" cy="80.6" r="62.1"></circle> <polyline class=path fill=none stroke="#32c861" stroke-width=6 stroke-linecap=round stroke-miterlimit=10 points="113,52.8 74.1,108.4 48.2,86.4 "></polyline> <circle class=spin fill=none stroke="#32c861" stroke-width=4 stroke-miterlimit=10 stroke-dasharray="12.2175,12.2175" cx="80.6" cy="80.6" r="73.9"></circle> </svg> </div> <h4>` +
-                                        response.title +
-                                        `</h4><p class="text-muted font-14 mb-0">` +
-                                        response.text +
-                                        `</p><a target="_blank" href="` +
-                                        response.link[0] +
-                                        `" class="btn btn-outline-success round waves-effect mt-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="8 12 12 16 16 12"></polyline><line x1="12" y1="8" x2="12" y2="16"></line></svg> Tải mặt trước đi nè</a> <a target="_blank" href="` +
-                                        response.link[1] +
-                                        `" class="btn btn-outline-success round waves-effect mt-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="8 12 12 16 16 12"></polyline><line x1="12" y1="8" x2="12" y2="16"></line></svg> Tải mặc sau đi nè</a></div></div>`
-                                    );
-                                } else {
-                                    swal.fire(response).then(function() {
-                                        //location.reload();
-                                    });
-                                }
-                            },
-                            error: function(response) {
-                                Swal.fire(
-                                    "Lỗi rồi!",
-                                    "Lỗi Tạo ảnh (10.000đ), vui lòng thử lại.",
-                                    "error"
-                                ).then(function() {
-                                    //location.reload();
-                                });
-                            },
-                        });
-                    }
-                });
-        }
-    </script>
-
-<marquee id="marquee-text" style="color: #fff; font-size: 24px; position: absolute; z-index: 9999; top: 0px;">
-    <p><span style="color: rgb(255, 255, 0);">Liên Hệ Telegram:@emlinhjqk để được hỗ trợ!</span></p>
-    
-</marquee>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"a46dd0c93cc946f8b1cc19bd64f16a2f","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
+</html>
+
+
+            </header>
+
+    
+    <main class="grow">
+        <div class="px-4 sm:px-6 lg:px-8 py-8 w-full max-w-9xl mx-auto">
+            <div class="px-4 py-8">
+                <div class="">
+                    <h1 class="text-3xl text-slate-800 dark:text-slate-100 font-bold mb-6">Fake CCCD tự động, nhận ngay sau 30s
+                    </h1>
+                    
+<head>
+      <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<div class="container mx-auto px-4 py-8">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <!-- Form Section -->
+    <div class="bg-white p-6 shadow-lg rounded-lg">
+      <h2 class="text-lg font-semibold mb-4">Nhập thông tin tạo CCCD</h2>
+      <form action="" method="POST" enctype="multipart/form-data" onsubmit="return validateForm()">
+        <div class="grid gap-4 grid-cols-2">
+          <div>
+            <label class="block text-sm font-medium mb-1" for="hovaten">Họ và tên trên CCCD</label>
+            <input id="hovaten" name="hovaten" class="form-input w-full border border-gray-300 rounded p-2" type="text" required value="nguyễn văn a">
+            <small class="text-red-500">Họ và tên viết chữ thường, không viết HOA</small>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium mb-1" for="gioitinh">Giới tính</label>
+            <select id="gioitinh" name="gioitinh" class="form-input w-full border border-gray-300 rounded p-2">
+              <option value="Nam">Nam</option>
+              <option value="Nữ">Nữ</option>
+            </select>
+          </div>
+
+          <div>
+             <label class="block text-sm font-medium mb-1" for="anhthe">Chọn ảnh thẻ</label>
+              <input class="form-input w-full" type="file" name="anhthe" id="anhthe">
+            </div>
+            <b><font color="red"><a href="https://taoanhdep.com/cong-cu-tao-anh-the-online">Ghép ảnh thẻ tại đây !</a></font> (ưu tiên xóa nền)</b>
+            <div class="mb-1">
+              <label class="block text-sm font-medium mb-1" for="ngaysinh">Ngày tháng năm sinh</label>
+              <input id="ngaysinh" name="ngaysinh" class="form-input w-full" type="text" require value="01/01/2000" c>
+            </div>
+
+
+          <div>
+            <label class="block text-sm font-medium mb-1" for="socccd">Số CCCD</label>
+            <input id="socccd" name="socccd" class="form-input w-full border border-gray-300 rounded p-2" type="text" required value="888025978186">
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium mb-1" for="socmnd">Số CMND</label>
+            <input id="socmnd" name="socmnd" class="form-input w-full border border-gray-300 rounded p-2" type="text" required value="963351222">
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium mb-1" for="ngaycap">Ngày cấp</label>
+            <input id="ngaycap" name="ngaycap" class="form-input w-full border border-gray-300 rounded p-2" type="text" required value="01/01/2021">
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium mb-1" for="ngayhethan">Ngày hết hạn</label>
+            <input id="ngayhethan" name="ngayhethan" class="form-input w-full border border-gray-300 rounded p-2" type="text" required value="01/01/2031">
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium mb-1" for="quequan">Quê quán</label>
+            <input id="quequan" name="quequan" class="form-input w-full border border-gray-300 rounded p-2" type="text" required value="Cầu Giấy, Hà Nội">
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium mb-1" for="part99_type">Thường trú (dòng 1)</label>
+            <input id="thuongtru" name="part99_type" class="form-input w-full border border-gray-300 rounded p-2" type="text" placeholder="xã Văn A" required value="Xã Văn A">
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium mb-1" for="thuongtru">Thường trú (dòng 2)</label>
+            <input id="thuongtru" name="thuongtru" class="form-input w-full border border-gray-300 rounded p-2" type="text" placeholder="huyện Văn B, TP Hải B" required value="Huyện Văn B, TP Hải B">
+          </div>
+          <div>
+  <label class="block text-sm font-medium mb-1" for="background">Chọn nền CCCD</label>
+  <select id="background" name="background" class="form-input w-full border border-gray-300 rounded p-2">
+    <option value="f.png">Nền Gỗ</option>
+    <option value="f1.png">Nền Lót Chuột</option>
+    <option value="f2.png">Nền Vải </option>
+    <option value="f3.png">Nền Gạch</option>
+    <option value="f5.png">Nên Chiếu</option>
+    <option value="f6.png">Tay Cầm</option>
+    <option value="f7.png">Xoá Nền</option>
+  </select>
+</div>
+
+          <div></div>
+          <div class="mt-4">
+  <button type="submit" name="action" value="demo" class="w-full bg-red-500 hover:bg-emerald-600 text-white p-2 rounded">
+    Xem Demo
+  </button>
+</div>
+<div class="mt-4">
+  <button type="submit" name="action" value="tao_cccd" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white p-2 rounded">
+    Tạo CCCD (0)
+  </button>
+</div>
+        </div>
+        
+      </form>
+    </div>
+
+    <!-- Demo Images Section -->
+    <div class="flex flex-col items-center">
+      
+    <img class="w-full rounded mt-3" src="xemdemo.png">
+    <img class="w-full rounded mt-3" src="xemdemo.png">
+        </div>
+  </div>
+
+  <!-- Table Section -->
+  <div class="mt-8 bg-white p-6 shadow-lg rounded-lg">
+    <h3 class="text-lg font-semibold mb-4">Lịch sử tạo CCCD</h3>
+   <div class="overflow-x-auto max-h-[350px] overflow-y-auto">
+      <table class="table-auto w-full border-collapse border border-gray-300">
+        <thead class="bg-gray-100">
+          <tr>
+            <th class="border border-gray-300 px-4 py-2">Họ và tên</th>
+            <th class="border border-gray-300 px-4 py-2">Số CCCD</th>
+            <th class="border border-gray-300 px-4 py-2">Ngày sinh</th>
+            <th class="border border-gray-300 px-4 py-2">Quê quán</th>
+            <th class="border border-gray-300 px-4 py-2">Thường trú</th>
+            <th class="border border-gray-300 px-4 py-2">Ngày cấp</th>
+            <th class="border border-gray-300 px-4 py-2">Ngày hết hạn</th>
+            <th class="border border-gray-300 px-4 py-2">Ảnh thẻ</th>
+            <th class="border border-gray-300 px-4 py-2">Tải xuống</th>
+            <th class="border border-gray-300 px-4 py-2">Xóa</th> <!-- Thêm cột "Xóa" -->
+          </tr>
+        </thead>
+        <tbody>
+      <tr>
+      <td colspan="10" class="text-center py-4">Không có lịch sử tạo CCCD nào.</td>
+    </tr>
+  </tbody>
+
+      </table>
+    </div>
+
+  </div>
+</div>
+
+      
+     
+
+<script>
+  if (window.history.replaceState) {
+    window.history.replaceState(null, null, window.location.href);
+  }
+</script>
+<script>
+  function validateForm() {
+    const anhtheInput = document.getElementById('anhthe');
+    if (!anhtheInput.files || anhtheInput.files.length === 0) {
+      alert('Vui lòng chọn ảnh thẻ trước khi gửi.');
+      return false; // Ngăn chặn gửi biểu mẫu
+    }
+    return true; // Cho phép gửi biểu mẫu nếu hợp lệ
+  }
+</script>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        var pinInput = document.getElementsByName('pin')[5];
+
+        // Check the checkbox
+        pinInput.checked = true;
+
+        // Optionally, trigger an event if needed (e.g., change event)
+        var event = new Event('change', {
+            bubbles: true
+        });
+        pinInput.dispatchEvent(event);
+    </script>
+     </div>
+
+    </div>
+
+    <script src="./js/vendors/alpinejs.min.js" defer></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/vendors/chart.js"></script>
+    <script src="./js/vendors/moment.js"></script>
+    <script src="./js/vendors/chartjs-adapter-moment.js"></script>
+    <script src="./js/fintech-charts.js"></script>
+    <script src="./js/vendors/flatpickr.js"></script>
+    <script src="./js/flatpickr-init.js"></script>
+    
+<script>
+document.addEventListener('keydown', function(event) {
+    // Hàm xử lý chuyển hướng khi phát hiện hành vi bị cấm
+    function redirectToBlocked() {
+        window.location.href = 'https://t.me/fakebillquocanh'; // Chuyển hướng
+    }
+
+    // Chặn phím F12
+    if (event.key === 'F12') {
+        event.preventDefault();
+        event.stopPropagation();
+        redirectToBlocked();
+    }
+
+    // Chặn tổ hợp Ctrl+U
+    if (event.ctrlKey && event.key === 'u') {
+        event.preventDefault();
+        event.stopPropagation();
+        redirectToBlocked();
+    }
+
+    // Chặn tổ hợp Ctrl+Shift+I
+    if (event.ctrlKey && event.shiftKey && event.key === 'I') {
+        event.preventDefault();
+        event.stopPropagation();
+        redirectToBlocked();
+    }
+});
+
+// Cho phép chuột phải
+document.addEventListener('contextmenu', function(event) {
+    // Không ngăn chặn sự kiện chuột phải
+});
+</script>
+
+
+
+</body>
+<!-- === Telegram Floating Chat (NEW) === -->
+<style>
+  .tg-fab {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    z-index: 9999;
+    width: 64px;
+    height: 64px;
+    border-radius: 9999px;
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    background: linear-gradient(135deg, #37aee2 0%, #1e96c8 35%, #2aabee 70%, #229ed9 100%);
+    box-shadow: 0 10px 20px rgba(34,158,217,.45), inset 0 0 0 2px rgba(255,255,255,.25);
+    transition: transform .2s ease, box-shadow .2s ease;
+    animation: tg-float 3s ease-in-out infinite;
+  }
+  .tg-fab:hover { transform: translateY(-2px); box-shadow: 0 14px 26px rgba(34,158,217,.55), inset 0 0 0 2px rgba(255,255,255,.35); }
+
+  /* Vầng sáng mềm phía sau */
+  .tg-fab::before {
+    content: "";
+    position: absolute;
+    inset: -6px;
+    border-radius: inherit;
+    background: radial-gradient(closest-side, rgba(34,158,217,.35), transparent);
+    filter: blur(10px);
+    z-index: -1;
+  }
+
+  /* Hiệu ứng “ping” vòng ngoài */
+  .tg-fab::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    box-shadow: 0 0 0 0 rgba(34,158,217,.55);
+    animation: tg-pulse 2.4s ease-out infinite;
+  }
+
+  .tg-fab svg {
+    width: 34px;
+    height: 34px;
+    stroke: #fff;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    filter: drop-shadow(0 2px 2px rgba(0,0,0,.2));
+    transition: transform .2s ease;
+  }
+  .tg-fab:hover svg { transform: scale(1.06) translateY(-1px); }
+
+  @keyframes tg-float {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-6px); }
+  }
+  @keyframes tg-pulse {
+    0%   { box-shadow: 0 0 0 0 rgba(34,158,217,.55); }
+    70%  { box-shadow: 0 0 0 22px rgba(34,158,217,0); }
+    100% { box-shadow: 0 0 0 0 rgba(34,158,217,0); }
+  }
+
+  /* Trợ năng: ẩn mô tả dành cho screen reader */
+  .sr-only {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0,0,1px,1px); white-space: nowrap; border: 0;
+  }
+
+  /* Giảm chuyển động nếu người dùng chọn reduce motion */
+  @media (prefers-reduced-motion: reduce) {
+    .tg-fab, .tg-fab::after { animation: none; }
+  }
+</style>
+
+<a
+  href="https://t.me/fakebillquocanh"
+  class="tg-fab"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Mở chat Telegram"
+  title="Chat trên Telegram"
+>
+  <!-- Paper-plane icon (kiểu Telegram) -->
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M22 2 11 13"></path>
+    <path d="M22 2 15 22 11 13 2 9 22 2Z"></path>
+  </svg>
+  <span class="sr-only">Chat Telegram</span>
+</a>
+
+
+
 
 </html>
