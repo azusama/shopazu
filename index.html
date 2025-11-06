@@ -1,195 +1,1254 @@
+
 <!DOCTYPE html>
-<html lang="vi">
+<html class="loading dark-layout" lang="en" data-textdirection="ltr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HEYBANK PREMIUM - Fake CCCD 2 Mặt</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <base href="https://app.fakebill.org/fe/">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0,minimal-ui">
+    <meta name="description" content="FakeBill.org là hệ thống làm giả bill ngân hàng Việt Nam uy tín, hỗ trợ tạo hóa đơn chuyển khoản, sao kê, biến động số dư chuyên nghiệp. Giao diện dễ dùng, xử lý nhanh chóng, bảo mật tuyệt đối.">
+    <meta name="keywords" content="tạo bill chuyển khoản, tạo bill ngân hàng vietcombank, mbbank, techcombank, agribank, bán kyc, làm bill ngân hàng, tạo bill vcb, tạo bill tpbank, làm bill chuyển khoản, tạo bill ảo, tạo bill chuyển khoản ngân hàng, bán kyc">
+    <meta name="author" content="FAKEBILL.ORG">
+    <meta name="csrf-token" content="683Xu8sUIVBrSqrRqsneqnF45qC1AV6ECxus9CHN">
+    <!-- if production mode enable this meta -->
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+        <title>Fake Bill - Hệ Thống Làm Giả Bill Ngân Hàng Việt Nam Uy Tín Tại FAKEBILL.ORG</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600" rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/faviconbank.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/faviconbank.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/faviconbank.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <link rel="stylesheet" type="text/css" href="vendors/css/vendors.min.css?time=1762436825">
+    <link rel="stylesheet" type="text/css" href="vendors/css/extensions/toastr.min.css?time=1762436825">
+    <link rel="stylesheet" type="text/css" href="vendors/css/extensions/sweetalert2.min.css?time=1762436825">
+    <link rel="stylesheet" type="text/css" href="vendors/css/forms/select/select2.min.css?time=1762436825">
+    <link rel="stylesheet" type="text/css" href="vendors/css/charts/apexcharts.css?time=1762436825">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css?time=1762436825">
+
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css?time=1762436825">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-extended.css?time=1762436825">
+    <link rel="stylesheet" type="text/css" href="css/colors.css?time=1762436825">
+
+    <link rel="stylesheet" type="text/css" href="css/themes/dark-layout.css?time=1762436825">
+    <link rel="stylesheet" type="text/css" href="css/themes/bordered-layout.css?time=1762436825">
+    <link rel="stylesheet" type="text/css" href="css/themes/semi-dark-layout.css?time=1762436825">
+
+    <link rel="stylesheet" type="text/css" href="css/core/menu/menu-types/vertical-menu.css?time=1762436825">
+    <link rel="stylesheet" type="text/css" href="css/plugins/extensions/ext-component-toastr.css?time=1762436825">
+    <link rel="stylesheet" type="text/css" href="css/plugins/extensions/ext-component-sweet-alerts.css?time=1762436825">
+    <link rel="stylesheet" type="text/css" href="css/plugins/forms/form-validation.css?time=1762436825">
+    <link rel="stylesheet" type="text/css" href="css/contact-buttons.min.css?time=1762436825">
+    <link href="https://cdn.jsdelivr.net/gh/startinhit/font-awesome/css/all.css?time=1762436825" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/plugins/charts/chart-apex.css?time=1762436825">
     <style>
-        :root{--p:#9b59b6;--d:#2c3e50;--g:#34495e;--lg:#00ff9d}
-        *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif}
-        body{background:#000;color:#ecf0f1;display:flex;min-height:100vh;flex-direction:column}
-        .sidebar{width:100%;background:linear-gradient(135deg,#8e44ad,#3498db);padding:20px;position:relative}
-        .logo{font-size:2.8rem;font-weight:900;color:var(--lg);text-shadow:0 0 15px var(--lg);text-align:center;margin:20px 0}
-        .versions{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin:20px 0}
-        .version-item{background:var(--g);padding:15px;text-align:center;border-radius:12px;cursor:pointer;color:#fff;font-weight:bold;transition:.3s}
-        .version-item.active,.version-item:hover{background:var(--p);box-shadow:0 0 20px rgba(155,89,182,.8)}
-        .main{padding:20px;flex:1}
-        .card{background:var(--d);padding:25px;border-radius:20px;box-shadow:0 15px 40px rgba(0,0,0,.7);margin-bottom:20px}
-        h2{color:var(--lg);margin-bottom:20px;text-align:center;font-size:2rem}
-        .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
-        label{display:block;margin-bottom:8px;color:#bdc3c7;font-size:1.1rem}
-        input,select{width:100%;padding:15px;border:none;border-radius:12px;background:#34495e;color:#fff;font-size:1rem}
-        .upload-area{border:3px dashed var(--p);border-radius:15px;padding:40px;text-align:center;cursor:pointer;margin:20px 0;background:rgba(155,89,182,.1)}
-        .upload-area:hover{background:rgba(155,89,182,.2)}
-        #preview{max-width:100%;border-radius:12px;margin-top:15px;display:none}
-        .buttons{display:flex;gap:15px;margin-top:30px;justify-content:center}
-        .btn{padding:15px 40px;border:none;border-radius:12px;cursor:pointer;font-weight:bold;font-size:1.2rem;transition:.3s}
-        .btn-reset{background:#34495e;color:#fff}
-        .btn-create{background:var(--p);color:#fff;box-shadow:0 0 20px rgba(155,89,182,.6)}
-        .result{text-align:center;margin-top:30px}
-        .result img{max-width:100%;border-radius:15px;box-shadow:0 10px 30px rgba(0,0,0,.8)}
-        @media(min-width:768px){.sidebar{width:300px;position:fixed;height:100%;overflow-y:auto}}
-        @media(max-width:768px){.form-grid{grid-template-columns:1fr}}
+        .timeline-item p:last-child {
+            margin: 0;
+        }
+        .timeline .timeline-item .timeline-point {
+            left: -1.4rem;
+            height: 2.75rem;
+            width: 2.75rem;
+            border: none;
+        }
+        .scroll {
+            max-height: 500px;
+            overflow-y: scroll;
+        }
+        .scroll::-webkit-scrollbar {
+            width: 3px;
+        }
+        .scroll::-webkit-scrollbar-thumb {
+            background: rgb(0 0 0 / 20%);
+        }
     </style>
+    <link rel="stylesheet" type="text/css" href="css/style.css?time=1762436825">
+        <link rel="stylesheet" type="text/css"
+          href="vendors/css/pickers/pickadate/pickadate.css">
+    <link rel="stylesheet" type="text/css"
+          href="vendors/css/pickers/flatpickr/flatpickr.min.css">
+    <link rel="stylesheet" type="text/css"
+          href="vendors/css/forms/wizard/bs-stepper.min.css">
+    <link rel="stylesheet" type="text/css"
+          href="css/plugins/forms/pickers/form-flat-pickr.css">
+    <link rel="stylesheet" type="text/css" href="css/plugins/forms/form-wizard.css">
+    <style>
+        .background {
+            display: inline-block;
+        }
+        .background:first-child {
+            margin-right: 20px;
+        }
+        .background img {
+            max-width: 100px;
+            margin-bottom: 10px;
+        }
+        .image-scroll {
+            max-width: 100px;
+            display: flex;
+            align-items: center;
+            flex-flow: column;
+        }
+        .image-scroll img {
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+        label {
+            cursor: pointer;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="css/components.css?time=1762436825">
+
+
+
+
+
+
+
+
+
+
+
+
+
 </head>
-<body>
-    <div class="sidebar">
-        <div class="logo">HEYBANK<br><span style="font-size:1rem">PREMIUM</span></div>
-        <div class="versions">
-            <div class="version-item active" data-ver="8">CCCD Ver 8</div>
-            <div class="version-item" data-ver="hand1">Cầm Tay V1</div>
-            <div class="version-item" data-ver="hand2">Cầm Tay V2</div>
-            <div class="version-item" data-ver="vneid">VNeID</div>
+
+
+<body class="vertical-layout vertical-menu-modern  navbar-floating footer-static  " data-open="click"
+      data-menu="vertical-menu-modern" data-col>
+
+<div class="preloader">
+    <div class="preloader-icon"></div>
+    <span>Vui lòng chờ...</span>
+</div>
+
+<nav
+    class="header-navbar navbar navbar-expand-lg align-items-center floating-nav navbar-dark navbar-shadow container-xxl">
+    <div class="navbar-container d-flex content">
+        <div class="bookmark-wrapper d-flex align-items-center">
+            <ul class="nav navbar-nav d-xl-none">
+                <li class="nav-item"><a class="nav-link menu-toggle" href="#"><i class="ficon"
+                                                                                 data-feather="menu"></i></a></li>
+            </ul>
+            <ul class="nav navbar-nav bookmark-icons">
+                <li class="nav-item d-none d-lg-block"><a class="nav-link" href="https://app.fakebill.org/profile" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Thông tin tài khoản"><i
+                            class="ficon" data-feather="user"></i></a></li>
+                <li class="nav-item d-none d-lg-block"><a class="nav-link" href="https://app.fakebill.org/change-pass" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Đổi mật khẩu"><i class="ficon"
+                                                                                                                                      data-feather="lock"></i></a>
+                </li>
+                <li class="nav-item d-none d-lg-block"><a class="nav-link" href="https://app.fakebill.org/deposits" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Nạp tiền"><i class="ficon"
+                                                                                                                                  data-feather="credit-card"></i></a>
+                </li>
+            </ul>
         </div>
+        <ul class="nav navbar-nav align-items-center ms-auto">
+            <li class="nav-item d-lg-block"><a class="nav-link nav-link-style"><i class="ficon"
+                                                                                  data-feather="sun"></i></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <li class="nav-item dropdown dropdown-user"><a class="nav-link dropdown-toggle dropdown-user-link"
+                                                           id="dropdown-user" href="#" data-bs-toggle="dropdown" aria-haspopup="true"
+                                                           aria-expanded="false">
+                    <div class="user-nav d-sm-flex d-none align-items-center me-0"><span
+                            class="user-name fw-bolder">0đ</span><span class="user-status">Số
+                                dư ví</span>
+                    </div>
+                </a>
+            </li>
+            <li class="nav-item dropdown dropdown-user">
+                <a class="nav-link dropdown-toggle dropdown-user-link"
+                                                           id="dropdown-user" href="#" data-bs-toggle="dropdown" aria-haspopup="true"
+                                                           aria-expanded="false">
+                    <div class="user-nav d-sm-flex d-none align-items-center"><span
+                            class="user-name fw-bolder">njkasdnjhas</span><span class="user-status">Người dùng</span>
+                    </div>
+                    <span class="avatar">
+                                                    <img src="https://www.gravatar.com/avatar/407d9d75ba1fc53d88ca410c54d91fc0?s=40&d=mp&r=g" />                                                <span class="avatar-status-online"></span>
+                    </span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdown-user">
+                    <a class="dropdown-item" href="https://app.fakebill.org/profile"><i class="me-50"
+                                                                                     data-feather="user"></i>
+                        Thông tin</a>
+                    <a class="dropdown-item" href="https://app.fakebill.org/buying-history"><i
+                            class="fal fa-history me-50"></i>
+                        Lịch
+                        sử</a>
+                    <a class="dropdown-item" href="https://app.fakebill.org/deposits"><i
+                            class="fal fa-credit-card me-50"></i>
+                        Nạp
+                        tiền</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" onclick="logout()"
+                       href="javascript:void(0)"><i class="me-50" data-feather="power"></i> Đăng xuất</a>
+                </div>
+            </li>
+        </ul>
     </div>
-
-    <div class="main">
-        <div class="card">
-            <h2>FAKE CCCD 2 MẶT - SIÊU THẬT</h2>
-            <div class="form-grid">
-                <div><label>Họ và tên</label><input id="hoten" value="NGUYỄN VĂN A"></div>
-                <div><label>Giới tính</label><select id="gioitinh"><option>Nam</option><option>Nữ</option></select></div>
-                <div><label>Ngày sinh</label><input id="ngaysinh" value="29/07/1990"></div>
-                <div><label>Số CCCD</label><input id="socccd" value="027180595810"></div>
-                <div><label>Quê quán</label><input id="quequan" value="Hòa Thành, Tp. Cà Mau, Cà Mau"></div>
-                <div><label>Nơi thường trú</label><input id="noitt" value="33/2 Tổ 8 Hòa Thành, Tp. Cà Mau, Cà Mau"></div>
-                <div><label>Ngày hết hạn</label><input id="hethan" value="26/12/2032"></div>
-                <div><label>Quốc tịch</label><input id="quoctich" value="Việt Nam"></div>
-                <div><label>Ngày cấp (mặt sau)</label><input id="ngaycap" value="20/04/2022"></div>
-                <div><label>MRZ (mặt sau)</label><input id="mrz" value="NGUYEN<<VAN<A"></div>
+</nav>
+<ul class="main-search-list-defaultlist d-none">
+    <li class="d-flex align-items-center"><a href="#">
+            <h6 class="section-label mt-75 mb-0">Files</h6>
+        </a></li>
+    <li class="auto-suggestion"><a class="d-flex align-items-center justify-content-between w-100"
+                                   href="app-file-manager.html">
+            <div class="d-flex">
+                <div class="me-75"><img src="images/icons/xls.png" alt="png"
+                                        height="32"></div>
+                <div class="search-data">
+                    <p class="search-data-title mb-0">Two new item submitted</p><small class="text-muted">Marketing
+                        Manager</small>
+                </div>
+            </div><small class="search-data-size me-50 text-muted">&apos;17kb</small>
+        </a></li>
+    <li class="auto-suggestion"><a class="d-flex align-items-center justify-content-between w-100"
+                                   href="app-file-manager.html">
+            <div class="d-flex">
+                <div class="me-75"><img src="images/icons/jpg.png" alt="png"
+                                        height="32"></div>
+                <div class="search-data">
+                    <p class="search-data-title mb-0">52 JPG file Generated</p><small class="text-muted">FontEnd
+                        Developer</small>
+                </div>
+            </div><small class="search-data-size me-50 text-muted">&apos;11kb</small>
+        </a></li>
+    <li class="auto-suggestion"><a class="d-flex align-items-center justify-content-between w-100"
+                                   href="app-file-manager.html">
+            <div class="d-flex">
+                <div class="me-75"><img src="images/icons/pdf.png" alt="png"
+                                        height="32"></div>
+                <div class="search-data">
+                    <p class="search-data-title mb-0">25 PDF File Uploaded</p><small class="text-muted">Digital
+                        Marketing Manager</small>
+                </div>
+            </div><small class="search-data-size me-50 text-muted">&apos;150kb</small>
+        </a></li>
+    <li class="auto-suggestion"><a class="d-flex align-items-center justify-content-between w-100"
+                                   href="app-file-manager.html">
+            <div class="d-flex">
+                <div class="me-75"><img src="images/icons/doc.png" alt="png"
+                                        height="32"></div>
+                <div class="search-data">
+                    <p class="search-data-title mb-0">Anna_Strong.doc</p><small class="text-muted">Web
+                        Designer</small>
+                </div>
+            </div><small class="search-data-size me-50 text-muted">&apos;256kb</small>
+        </a></li>
+    <li class="d-flex align-items-center"><a href="#">
+            <h6 class="section-label mt-75 mb-0">Members</h6>
+        </a></li>
+    <li class="auto-suggestion"><a class="d-flex align-items-center justify-content-between py-50 w-100"
+                                   href="app-user-view-account.html">
+            <div class="d-flex align-items-center">
+                <div class="avatar me-75"><img
+                        src="images/portrait/small/avatar-s-8.jpg" alt="png"
+                        height="32"></div>
+                <div class="search-data">
+                    <p class="search-data-title mb-0">John Doe</p><small class="text-muted">UI designer</small>
+                </div>
             </div>
-
-            <label>Ảnh chân dung 3x4 (nền trắng)</label>
-            <div class="upload-area" id="drop-area">
-                <p>Click hoặc kéo thả ảnh vào đây</p>
-                <input type="file" id="photo" accept="image/*" hidden>
-                <img id="preview" src="" alt="Preview">
+        </a></li>
+    <li class="auto-suggestion"><a class="d-flex align-items-center justify-content-between py-50 w-100"
+                                   href="app-user-view-account.html">
+            <div class="d-flex align-items-center">
+                <div class="avatar me-75"><img
+                        src="images/portrait/small/avatar-s-1.jpg" alt="png"
+                        height="32"></div>
+                <div class="search-data">
+                    <p class="search-data-title mb-0">Michal Clark</p><small class="text-muted">FontEnd
+                        Developer</small>
+                </div>
             </div>
-
-            <div class="buttons">
-                <button class="btn btn-reset" onclick="location.reload()">Làm Mới</button>
-                <button class="btn btn-create" onclick="taoCCCD2Mat()">TẠO 2 MẶT</button>
+        </a></li>
+    <li class="auto-suggestion"><a class="d-flex align-items-center justify-content-between py-50 w-100"
+                                   href="app-user-view-account.html">
+            <div class="d-flex align-items-center">
+                <div class="avatar me-75"><img
+                        src="images/portrait/small/avatar-s-14.jpg" alt="png"
+                        height="32"></div>
+                <div class="search-data">
+                    <p class="search-data-title mb-0">Milena Gibson</p><small class="text-muted">Digital Marketing
+                        Manager</small>
+                </div>
             </div>
-        </div>
-
-        <div class="result" id="result"></div>
-    </div>
-
-    <script>
-        let currentVer = '8';
-        document.querySelectorAll('.version-item').forEach(v => v.onclick = () => {
-            document.querySelectorAll('.version-item').forEach(x => x.classList.remove('active'));
-            v.classList.add('active');
-            currentVer = v.dataset.ver;
+        </a></li>
+    <li class="auto-suggestion"><a class="d-flex align-items-center justify-content-between py-50 w-100"
+                                   href="app-user-view-account.html">
+            <div class="d-flex align-items-center">
+                <div class="avatar me-75"><img
+                        src="images/portrait/small/avatar-s-6.jpg" alt="png"
+                        height="32"></div>
+                <div class="search-data">
+                    <p class="search-data-title mb-0">Anna Strong</p><small class="text-muted">Web
+                        Designer</small>
+                </div>
+            </div>
+        </a></li>
+</ul>
+<ul class="main-search-list-defaultlist-other-list d-none">
+    <li class="auto-suggestion justify-content-between"><a
+            class="d-flex align-items-center justify-content-between w-100 py-50">
+            <div class="d-flex justify-content-start"><span class="me-75"
+                                                            data-feather="alert-circle"></span><span>No results found.</span></div>
+        </a></li>
+</ul>
+<script type="text/javascript">
+    function logout() {
+        Swal.fire({
+            title: 'Cảnh báo!',
+            text: "Bạn có chắc chắn muốn đăng xuất không?",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Có, tôi muốn!',
+            cancelButtonText: 'Không',
+            customClass: {
+                confirmButton: 'btn btn-primary',
+                cancelButton: 'btn btn-outline-danger ms-1'
+            },
+            buttonsStyling: false
+        }).then(function(result) {
+            if (result.value) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Chúc mừng!',
+                    text: 'Bạn đã đăng xuất thành công.',
+                    customClass: {
+                        confirmButton: 'btn btn-success'
+                    }
+                }).then(function() {
+                    window.location = 'http://app.fakebill.org/logout'
+                });
+            }
         });
+    }
+</script>
+<div class="main-menu menu-fixed menu-dark menu-accordion menu-shadow" data-scroll-to-active="true">
+    <div class="navbar-header">
+        <ul class="nav navbar-nav flex-row">
+            <li class="nav-item me-auto">
+                <a class="navbar-brand" href="https://app.fakebill.org">
+                    <div class="logo-site">
+                        <img src="https://app.fakebill.org/q3Mgfxcvkh.png" alt="logo site">
+                    </div>
+                </a>
+            </li>
+            <li class="nav-item nav-toggle"><a class="nav-link modern-nav-toggle pe-0" data-bs-toggle="collapse"><i
+                        class="d-block d-xl-none text-primary toggle-icon font-medium-4" data-feather="x"></i><i
+                        class="d-none d-xl-block collapse-toggle-icon font-medium-4  text-primary"
+                        data-feather="disc" data-ticon="disc"></i></a></li>
+        </ul>
+    </div>
+    <div class="shadow-bottom"></div>
+    <div class="main-menu-content">
+        <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+    <li class="nav-item disabled "><a class="d-flex align-items-center" href="javascript:void(0)"><span
+                class="menu-title text-truncate" data-i18n="Menu Levels">Số
+                            dư ví:
+                            0đ</span></a>
+    </li>
+    <li class=" navigation-header">
+        <span data-i18n="Menu chức năng">Menu chức năng</span>
+        <i data-feather="more-horizontal"></i></li>
+    <li class="nav-item"><a class="d-flex align-items-center" href="https://app.fakebill.org"><i
+                data-feather="home"></i><span class="menu-title text-truncate"
+                                              data-i18n="Menu Levels">Dashboard</span></a>
+    </li>
+    <li class="nav-item"><a class="d-flex align-items-center" href="https://app.fakebill.org/account-packs"><i data-feather="package"></i><span
+                class="menu-title text-truncate" data-i18n="Menu Levels">Gói
+                                tài
+                                khoản</span></a>
+    </li>
+    <li class="nav-item"><a class="d-flex align-items-center" href="#" data-bs-toggle="modal"
+                            data-bs-target="#price-list"><i data-feather="dollar-sign"></i><span
+                class="menu-title text-truncate" data-i18n="Menu Levels">Bảng giá bill</span></a>
+    </li>
+    <li class="nav-item"><a class="d-flex align-items-center" href="https://app.fakebill.org/deposits"><i
+                data-feather="credit-card"></i><span class="menu-title text-truncate"
+                                                     data-i18n="Menu Levels">Nạp tiền</span></a>
+    </li>
+    <li class=" navigation-header"><span data-i18n="Menu tạo bill">Menu tạo bill</span><i
+            data-feather="more-horizontal"></i></li>
+    <li class="nav-item"><a class="d-flex align-items-center" href="https://app.fakebill.org/bill/transfer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                 height="16" fill="currentColor" class="bi bi-bank2" viewbox="0 0 16 16">
+                <path
+                    d="M8.277.084a.5.5 0 0 0-.554 0l-7.5 5A.5.5 0 0 0 .5 6h1.875v7H1.5a.5.5 0 0 0 0 1h13a.5.5 0 1 0 0-1h-.875V6H15.5a.5.5 0 0 0 .277-.916l-7.5-5zM12.375 6v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zM8 4a1 1 0 1 1 0-2 1 1 0 0 1 0 2zM.5 15a.5.5 0 0 0 0 1h15a.5.5 0 1 0 0-1H.5z"/>
+            </svg>
+            <span class="menu-title text-truncate" data-i18n="Menu Levels">Bill chuyển
+                            khoản</span></a>
+    </li>
+    <li class="nav-item"><a class="d-flex align-items-center" href="https://app.fakebill.org/bill/transaction">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                 height="16" fill="currentColor" class="bi bi-bank2" viewbox="0 0 16 16">
+                <path
+                    d="M8.277.084a.5.5 0 0 0-.554 0l-7.5 5A.5.5 0 0 0 .5 6h1.875v7H1.5a.5.5 0 0 0 0 1h13a.5.5 0 1 0 0-1h-.875V6H15.5a.5.5 0 0 0 .277-.916l-7.5-5zM12.375 6v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zM8 4a1 1 0 1 1 0-2 1 1 0 0 1 0 2zM.5 15a.5.5 0 0 0 0 1h15a.5.5 0 1 0 0-1H.5z"/>
+            </svg>
+            <span class="menu-title text-truncate" data-i18n="Menu Levels">Bill biến động</span></a>
+    </li>
+    <li class="nav-item"><a class="d-flex align-items-center" href="https://app.fakebill.org/bill/balance">
+            <svg
+                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-bank2" viewbox="0 0 16 16">
+                <path
+                    d="M8.277.084a.5.5 0 0 0-.554 0l-7.5 5A.5.5 0 0 0 .5 6h1.875v7H1.5a.5.5 0 0 0 0 1h13a.5.5 0 1 0 0-1h-.875V6H15.5a.5.5 0 0 0 .277-.916l-7.5-5zM12.375 6v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zM8 4a1 1 0 1 1 0-2 1 1 0 0 1 0 2zM.5 15a.5.5 0 0 0 0 1h15a.5.5 0 1 0 0-1H.5z"/>
+            </svg>
+            <span class="menu-title text-truncate" data-i18n="Menu Levels">Bill số dư</span></a>
+    </li>
+    <li class="nav-item">
+        <a class="d-flex align-items-center" href="https://app.fakebill.org/bill/lock">
+            <svg
+                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-bank2" viewbox="0 0 16 16">
+                <path
+                    d="M8.277.084a.5.5 0 0 0-.554 0l-7.5 5A.5.5 0 0 0 .5 6h1.875v7H1.5a.5.5 0 0 0 0 1h13a.5.5 0 1 0 0-1h-.875V6H15.5a.5.5 0 0 0 .277-.916l-7.5-5zM12.375 6v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zM8 4a1 1 0 1 1 0-2 1 1 0 0 1 0 2zM.5 15a.5.5 0 0 0 0 1h15a.5.5 0 1 0 0-1H.5z"/>
+            </svg>
+            <span class="menu-title text-truncate" data-i18n="Menu Levels">Bill màn hình</span>&nbsp;
+            <span style="padding: 0.2rem 0.4rem;font-size: 75%" class="fw-normal badge bg-danger d-none">mới</span>
 
-        const dropArea = document.getElementById('drop-area');
-        const photoInput = document.getElementById('photo');
-        const preview = document.getElementById('preview');
-        dropArea.onclick = () => photoInput.click();
-        photoInput.onchange = e => {
-            const file = e.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = ev => {
-                    preview.src = ev.target.result;
-                    preview.style.display = 'block';
-                    dropArea.querySelector('p').style.display = 'none';
-                };
-                reader.readAsDataURL(file);
+        </a>
+    </li>
+
+    <li class=" navigation-header"><span data-i18n="Menu khác">Menu KYC</span><i
+            data-feather="more-horizontal"></i></li>
+    <li class="nav-item"><a class="d-flex align-items-center" href="https://app.fakebill.org/kyc/cccd"><i
+                data-feather="credit-card"></i><span class="menu-title text-truncate"
+                                                     data-i18n="Menu Levels">CCCD/CC</span>
+            <span style="padding: 0.2rem 0.3rem; margin-left:0.2rem;font-size: 75%" class="fw-normal badge bg-danger ">Mới</span></a>
+    </li>
+    <li class="nav-item"><a class="d-flex align-items-center" href="https://app.fakebill.org/kyc/passport"><i
+                data-feather="credit-card"></i><span class="menu-title text-truncate"
+                                                     data-i18n="Menu Levels">Passport</span> <span
+                style="padding: 0.2rem 0.3rem; margin-left:0.2rem;font-size: 75%"
+                class="fw-normal badge bg-danger ">Mới</span></a>
+    </li>
+
+    <li class=" navigation-header"><span data-i18n="Menu khác">Menu Vé máy bay</span><i
+            data-feather="more-horizontal"></i></li>
+    <li class="nav-item"><a class="d-flex align-items-center" href="https://app.fakebill.org/tickets/vna"><i
+                data-feather="send"></i><span class="menu-title text-truncate"
+                                                     data-i18n="Menu Levels">Vietnam Airlines</span>
+            <span style="padding: 0.2rem 0.3rem; margin-left:0.2rem;font-size: 75%" class="fw-normal badge bg-danger ">Mới</span></a>
+    </li>
+    <li class="nav-item"><a class="d-flex align-items-center" href="https://app.fakebill.org/tickets/vja"><i
+                data-feather="send"></i><span class="menu-title text-truncate"
+                                                     data-i18n="Menu Levels">Vietjetair</span> <span
+                style="padding: 0.2rem 0.3rem; margin-left:0.2rem;font-size: 75%"
+                class="fw-normal badge bg-danger ">Mới</span></a>
+    </li>
+
+
+    <li class=" navigation-header"><span data-i18n="Menu khác">Menu khác</span><i
+            data-feather="more-horizontal"></i></li>
+    <li class="nav-item"><a class="d-flex align-items-center" href="https://app.fakebill.org/ref"><i
+                data-feather="share-2"></i><span class="menu-title text-truncate"
+                                                 data-i18n="Menu Levels">Liên kết giới thiệu</span></a>
+    </li>
+    <li class="nav-item"><a class="d-flex align-items-center" href="https://app.fakebill.org/faqs"><i
+                data-feather="info"></i><span class="menu-title text-truncate" data-i18n="Menu Levels">Câu
+                            hỏi thường gặp</span></a>
+    </li>
+    <li class="nav-item"><a class="d-flex align-items-center"
+                            href="https://t.me/emlinhjqk"><i
+                data-feather="info"></i><span class="menu-title text-truncate" data-i18n="Menu Levels">Hỗ trợ</span></a>
+    </li>
+</ul>
+    </div>
+</div>
+
+<div class="app-content content ">
+    <div class="content-overlay"></div>
+    <div class="header-navbar-shadow"></div>
+    <div class="content-wrapper container-xxl p-0">
+        <div class="content-header row">
+            <div class="content-header-left col-md-9 col-12 mb-2">
+                <div class="row breadcrumbs-top">
+                    <div class="col-12">
+                        <h2 class="content-header-title float-start mb-0">Dashboard</h2>
+                        <div class="breadcrumb-wrapper">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item">
+                                    <a href="https://app.fakebill.org">
+                                        Home
+                                    </a>
+                                </li>
+                                <li class="breadcrumb-item">
+                                    Tạo KYC CCCD                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <div class="content-body">
+        <div class="row match-height">
+            <div class="col-md-8 col-12">
+                <div class="col-12">
+                    <div class="card bg-danger text-white mb-2">
+                        <div class="card-body">
+                            <p class="card-text">Nếu bạn có nhu cầu làm nhiều hãy đăng ký <a href="https://app.fakebill.org/account-packs" class="badge rounded-pill bg-warning draggable">gói
+                                    tài
+                                    khoản</a> để tiết kiệm hơn chi
+                                phí</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card bs-stepper horizontal-wizard-example">
+                    <div class="bs-stepper-header" role="tablist">
+
+                        <div class="step" data-target="#setup" role="tab" id="setup-trigger">
+                            <button type="button" class="step-trigger">
+                                <span class="bs-stepper-box d-none">2</span>
+                                <span class="bs-stepper-label">
+                                            <span class="bs-stepper-title">Cấu hình giao diện</span>
+                                            <span class="bs-stepper-subtitle">Cài đặt thông tin</span>
+                                        </span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bs-stepper-content">
+
+                        <div id="setup" class="content" role="tabpanel" aria-labelledby="setup-trigger">
+                            <form>
+                                <input type="hidden" name="_token" value="683Xu8sUIVBrSqrRqsneqnF45qC1AV6ECxus9CHN" autocomplete="off">                                <div class="row">
+                                    <div class="mb-1 col-md-6 col-12">
+                                        <label class="form-label" for="cccd">Thẻ Căn Cước Công Dân (cũ)</label>
+                                        <div>
+                                            <div class="form-check form-check-inline">
+                                                <input checked class="form-check-input" type="radio" name="type" id="cccd" value="cccd">
+                                                <label class="form-check-label" for="cccd">CCCD</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-1 col-md-6 col-12">
+                                        <label class="form-label" for="cc">Thẻ Căn Cước (mới)</label>
+                                        <div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="type" id="cc" value="cc">
+                                                <label class="form-check-label" for="cc">Căn Cước</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <div class="mb-1">
+                                            <label class="form-label" for="name">Họ và tên trên CCCD/CC (Có dấu)</label>
+                                            <input type="text" id="name" class="form-control" required
+                                                   placeholder="Nhập họ và tên trên CCCD/CC" name="name">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <div class="mb-1">
+                                            <label class="form-label" for="sex">Giới tính</label>
+                                            <select required class="select2 form-select" name="sex" id="sex">
+                                                <option value="">Chọn giới tính</option>
+                                                <option value="Nam">Nam</option>
+                                                <option value="Nữ">Nữ</option>
+                                            </select>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-12 mb-1">
+                                        <label class="form-label" for="avatar">Chọn ảnh thẻ(nền trắng)</label>
+                                        <div class="input-group">
+                                            <input required type="file" id="avatar" name="avatar" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-12 mb-1">
+                                        <label class="form-label" for=""></label>
+                                        <div class="input-group form-control-plaintext">
+                                            Hd:
+                                            <a href="https://taoanhdep.com/cong-cu-tao-anh-the-online/" target="_blank"  class="text-danger ps-1"> Ghép ảnh thẻ</a>
+                                            <a href="https://www.remove.bg/vi" target="_blank"  class="text-danger ps-1"> Xoá background</a>
+                                            <a href="https://app.fakebill.org/kyc/viduanhthe.png" target="_blank" class="text-success ps-1"> Ảnh mẫu</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <div class="mb-1">
+                                            <label class="form-label" for="dob">Ngày tháng năm sinh</label>
+                                            <input required type="text" id="dob" class="form-control flatpickr-date2"
+                                                   name="dob" placeholder="Nhập ngày cấp">
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-12 mb-1">
+                                        <div class="mb-1">
+                                            <label class="form-label" for="hometown">Quê quán (Xã,Huyện,Tỉnh)</label>
+                                            <input required type="text" id="hometown" class="form-control" name="hometown" placeholder="Nhập quê quán" aria-invalid="false">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <div class="mb-1">
+                                            <label class="form-label" for="cmnd">Số CMND (9 số)</label>
+                                            <input required type="text" id="cmnd" class="form-control"
+                                                   name="cmnd" placeholder="Nhập số CMND của bạn">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <div class="mb-1">
+                                            <label class="form-label" for="cccd">Số CCCD/CC (12 số)</label>
+                                                <input required type="text" id="cccd" class="form-control"
+                                                   name="cccd" placeholder="Nhập số CCCD/CC của bạn">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <div class="mb-1">
+                                            <label class="form-label" for="time">Ngày cấp</label>
+                                            <input required type="text" id="issued_date" class="form-control flatpickr-date2"
+                                                   name="issued_date" placeholder="Nhập ngày cấp">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <div class="mb-1">
+                                            <label class="form-label" for="date">Ngày hết hạn</label>
+                                            <input required type="text" id="expired_date" class="form-control flatpickr-date2"
+                                                   name="expired_date" placeholder="Nhập ngày hết hạn">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-6 col-12 mb-1">
+                                        <div class="mb-1">
+                                            <label class="form-label" for="address1">Thường trú (dòng 1)</label>
+                                            <input required type="text" id="address1" class="form-control" name="address1" placeholder="Nhập thường trú (dòng 1)" aria-invalid="false">
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-12 mb-1">
+                                        <div class="mb-1">
+                                            <label class="form-label" for="address2">Thường trú (dòng 2)</label>
+                                            <input required type="text" id="address2" class="form-control" name="address2" placeholder="Nhập thường trú (dòng 2)" aria-invalid="false">
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </form>
+                            <div >
+                                <button class="float-end btn btn-success btn-submit"><i data-feather="plus-circle"></i>
+                                    Tạo ảnh (10.000đ)</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-12">
+                <div class="card d-flex flex-column justify-content-evenly">
+                    <img class="img-fluid" src="../kyc/f_cccd.jpg"
+                         alt="Demo cccd">
+                    <img class="img-fluid" src="../kyc/b_cccd.jpg"
+                    alt="Demo cccd">
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+<div class="sidenav-overlay"></div>
+<div class="drag-target"></div>
+
+<footer class="footer footer-static footer-light">
+    <p class="clearfix mb-0">
+        <span class="float-md-start d-block d-md-inline-block mt-25">
+            COPYRIGHT &copy; 2025
+            <a class="ms-25" href="/" target="_blank">Fake Bill - Hệ Thống Làm Giả Bill Ngân Hàng Việt Nam Uy Tín Tại FAKEBILL.ORG</a>
+            <span class="d-none d-sm-inline-block">, All rights Reserved</span>
+        </span>
+        <span class="float-md-end d-none d-md-block">
+            Tạo Bill chuyển khoản ngân hàng, bán giấy tờ KYC<i data-feather="heart"></i>
+        </span>
+    </p>
+</footer>
+<button class="btn btn-primary btn-icon scroll-top" type="button"><i data-feather="arrow-up"></i></button>
+
+<div class="modal fade" id="price-list" tabindex="-1" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">Bảng giá bill</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body table-responsive">
+                <ul class="nav nav-pills nav-fill">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="home-tab-fill" data-bs-toggle="pill" href="#bill-transfer"
+                           aria-expanded="true">Chuyển khoản</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="profile-tab-fill" data-bs-toggle="pill" href="#bill-transaction"
+                           aria-expanded="false">Biến động</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="about-tab-fill" data-bs-toggle="pill" href="#bill-balance"
+                           aria-expanded="false">Số dư</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="bill-transfer" aria-labelledby="home-tab-fill"
+                         aria-expanded="true">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover">
+                                <thead>
+                                <tr>
+                                    <th>STT</th>
+                                    <th>Tên bill</th>
+                                    <th>Giá tiền</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Vietcombank</td>
+                                    <td>5,000 VND/1 bill</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Tpbank</td>
+                                    <td>5,000 VND/1 bill</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Mbbank</td>
+                                    <td>5,000 VND/1 bill</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Techcombank</td>
+                                    <td>5,000 VND/1 bill</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Acb</td>
+                                    <td>5,000 VND/1 bill</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Vietinbank</td>
+                                    <td>5,000 VND/1 bill</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>Bidv</td>
+                                    <td>5,000 VND/1 bill</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>Agribank</td>
+                                    <td>5,000 VND/1 bill</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>Vpbank</td>
+                                    <td>5,000 VND/1 bill</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>Momo</td>
+                                    <td>5,000 VND/1 bill</td>
+                                </tr>
+                                <tr>
+                                    <td>11</td>
+                                    <td>Sacombank</td>
+                                    <td>5,000 VND/1 bill</td>
+                                </tr>
+                                <tr>
+                                    <td>12</td>
+                                    <td>Msb</td>
+                                    <td>5,000 VND/1 bill</td>
+                                </tr>
+                                <tr>
+                                    <td>13</td>
+                                    <td>Ocb</td>
+                                    <td>5,000 VND/1 bill</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="bill-transaction" role="tabpanel" aria-labelledby="profile-tab-fill"
+                         aria-expanded="false">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover">
+                                <thead>
+                                <tr>
+                                    <th>STT</th>
+                                    <th>Tên bill</th>
+                                    <th>Giá tiền</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Vietcombank</td>
+                                    <td>5,000 VND/1 bill</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Techcombank</td>
+                                    <td>5,000 VND/1 bill</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Tpbank</td>
+                                    <td>5,000 VND/1 bill</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Acb</td>
+                                    <td>5,000 VND/1 bill</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Mbbank</td>
+                                    <td>5,000 VND/1 bill</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Momo</td>
+                                    <td>5,000 VND/1 bill</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>Vietinbank</td>
+                                    <td>5,000 VND/1 bill</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>Agribank</td>
+                                    <td>5,000 VND/1 bill</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="bill-balance" role="tabpanel" aria-labelledby="about-tab-fill"
+                         aria-expanded="false">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover">
+                                <thead>
+                                <tr>
+                                    <th>STT</th>
+                                    <th>Tên bill</th>
+                                    <th>Giá tiền</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Vietcombank</td>
+                                    <td>5,000 VND/1 bill</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Mbbank</td>
+                                    <td>5,000 VND/1 bill</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Vietinbank</td>
+                                    <td>5,000 VND/1 bill</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Tpbank</td>
+                                    <td>5,000 VND/1 bill</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Vpbank</td>
+                                    <td>5,000 VND/1 bill</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Đóng</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script>
+    //initial setup ajax header csrf
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        beforeSend: function (xhr)
+        {
+        },
+        complete: function (xhr)
+        {
+        }
+    });
+</script>
+<script src="vendors/js/vendors.min.js" type="text/javascript"></script>
+
+<script src="vendors/js/extensions/sweetalert2.all.min.js" type="text/javascript"></script>
+<script src="vendors/js/extensions/toastr.min.js" type="text/javascript"></script>
+<script src="vendors/js/forms/validation/jquery.validate.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/additional-methods.js" type="text/javascript"></script>
+<script src="vendors/js/forms/select/select2.full.min.js" type="text/javascript"></script>
+
+
+<script src="js/core/app-menu.js" type="text/javascript"></script>
+<script src="js/core/app.js" type="text/javascript"></script>
+
+
+
+<script src="js/scripts.js" type="text/javascript" defer></script>
+    <script src="vendors/js/pickers/flatpickr/flatpickr.min.js"
+            type="text/javascript"></script>
+    <script src="vendors/js/forms/wizard/bs-stepper.min.js"
+            type="text/javascript"></script>
+    <script src="vendors/js/forms/repeater/jquery.repeater.min.js"
+            type="text/javascript"></script>
+    <script type="text/javascript">
+        function touchspin(min, max) {
+            let touchspinValue = $('.touchspin-min-max');
+            if (touchspinValue.length > 0) {
+                touchspinValue
+                    .TouchSpin({
+                        min: min,
+                        max: max,
+                        buttondown_txt: feather.icons['minus'].toSvg(),
+                        buttonup_txt: feather.icons['plus'].toSvg()
+                    })
+                    .on('touchspin.on.startdownspin', function() {
+                        var $this = $(this);
+                        $('.bootstrap-touchspin-up').removeClass('disabled-max-min');
+                        if ($this.val() == min) {
+                            $(this).siblings().find('.bootstrap-touchspin-down').addClass('disabled-max-min');
+                        }
+                    })
+                    .on('touchspin.on.startupspin', function() {
+                        var $this = $(this);
+                        $('.bootstrap-touchspin-down').removeClass('disabled-max-min');
+                        if ($this.val() == max) {
+                            $(this).siblings().find('.bootstrap-touchspin-up').addClass('disabled-max-min');
+                        }
+                    });
             }
-        };
+        }
 
-        async function taoCCCD2Mat() {
-            const result = document.getElementById('result');
-            result.innerHTML = '<p>Đang tạo ảnh 2 mặt siêu thật... ⏳</p>';
+        function getWifi() {
+            let network = $('input[name="network"]:checked').val();
+            if (network == 'wifi') {
+                $('#wifi').parent().after(
+                    `<div class="form-check-inline touchspin" style="margin-left:-10px;"><div class="input-group input-group-sm"><input type="number" class="touchspin-min-max" name="options[wave_wifi]" value="3" /></div></div>`
+                );
+                touchspin(0, 3);
+            } else {
+                $('.touchspin').remove();
+            }
+        }
 
-            const canvas = document.createElement('canvas');
-            canvas.width = 1800;
-            canvas.height = 1140;
-            const ctx = canvas.getContext('2d');
-
-            // Load phôi mặt trước
-            const front = new Image();
-            front.src = 'cccd_front.png';
-            await new Promise(r => front.onload = r);
-
-            // Load phôi mặt sau
-            const back = new Image();
-            back.src = 'cccd_back.png';
-            await new Promise(r => back.onload = r);
-
-            // Vẽ nền trắng + 2 mặt
-            ctx.fillStyle = '#fff';
-            ctx.fillRect(0, 0, 1800, 1140);
-            ctx.drawImage(front, 50, 50, 800, 500);
-            ctx.drawImage(back, 900, 50, 800, 500);
-
-            // Font
-            ctx.fillStyle = '#000';
-            ctx.textAlign = 'left';
-
-            // === MẶT TRƯỚC ===
-            ctx.font = 'bold 38px Arial';
-            ctx.fillText(document.getElementById('hoten').value.toUpperCase(), 380, 170);
-            ctx.font = '32px Arial';
-            ctx.fillText(document.getElementById('ngaysinh').value, 380, 230);
-            ctx.fillText(document.getElementById('gioitinh').value, 680, 230);
-            ctx.font = 'bold 36px Arial';
-            ctx.fillText(document.getElementById('socccd').value, 380, 290);
-
-            // Địa chỉ quê quán + thường trú
-            const wrapText = (text, x, y, maxWidth, lineHeight) => {
-                let words = text.split(' ');
-                let line = '';
-                let cy = y;
-                for (let word of words) {
-                    let test = line + word + ' ';
-                    if (ctx.measureText(test).width > maxWidth && line !== '') {
-                        ctx.fillText(line, x, cy);
-                        line = word + ' ';
-                        cy += lineHeight;
-                    } else line = test;
+        function getSim() {
+            let sim = $('input[name="sim"]:checked').val();
+            if (sim == 'sim1') {
+                $('.touchspin2').remove();
+                if ($('.touchspin1').length === 0) {
+                    $('#sim1').parent().after(
+                        `<div class="form-check-inline touchspin1" style="margin-left:-10px;"><div class="input-group input-group-sm"><input type="number" class="touchspin-min-max" name="options[wave_sim1]" value="4" /></div></div>`
+                    );
+                    touchspin(0, 4);
                 }
-                ctx.fillText(line, x, cy);
-            };
-            ctx.font = '28px Arial';
-            wrapText(document.getElementById('quequan').value, 380, 360, 380, 35);
-            wrapText(document.getElementById('noitt').value, 380, 460, 380, 35);
-
-            // Ảnh chân dung
-            if (preview.src) {
-                const photo = new Image();
-                photo.src = preview.src;
-                await new Promise(r => photo.onload = r);
-                ctx.save();
-                ctx.beginPath();
-                ctx.arc(180, 180, 85, 0, Math.PI * 2);
-                ctx.clip();
-                ctx.drawImage(photo, 95, 95, 170, 170);
-                ctx.restore();
+            } else {
+                $('#sim2').parent().after(
+                    `<div class="form-check-inline touchspin2" style="margin-left:-10px;"><div class="input-group input-group-sm"><input type="number" class="touchspin-min-max" name="options[wave_sim2]" value="4" /></div></div>`
+                );
+                touchspin(0, 4);
             }
+        }
+        getWifi();
+        getSim();
+        $('input[name="network"]').on('change', getWifi);
+        $('input[name="sim"]').on('change', getSim);
+        var value = $('.badge.rounded-pill.bg-danger.draggable').text(),
+            text = $('.badge.rounded-pill.bg-danger.draggable').siblings('.form-label').text();
+        $('#trials').on('change', function() {
+            $('.modal').modal('hide');
+            let $this = $(this);
+            if ($this.is(':checked')) {
+                Swal.fire({
+                    title: 'Cảnh báo!',
+                    text: "Khi tích vào tạo thử bạn sẽ bị dính bản quyền khi tạo bill.",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonText: 'Vâng, tôi muốn tạo thử',
+                    cancelButtonText: 'Hủy',
+                    customClass: {
+                        confirmButton: 'btn btn-primary',
+                        cancelButton: 'btn btn-outline-danger ms-1'
+                    },
+                    buttonsStyling: false
+                }).then(function(result) {
+                    if (result.value) {
+                        $('.badge.rounded-pill.bg-danger.draggable').text('0 VND');
+                        $('.badge.rounded-pill.bg-danger.draggable').siblings('.form-label')
+                            .text('Thành tiền:');
+                    } else {
+                        $('#trials').prop('checked', false);
+                    }
+                });
+            } else {
+                $('.badge.rounded-pill.bg-danger.draggable').text(value);
+                $('.badge.rounded-pill.bg-danger.draggable').siblings('.form-label')
+                    .text(text)
+            }
+        });
+        var horizontalWizard = document.querySelector('.horizontal-wizard-example');
+        if (typeof horizontalWizard !== undefined && horizontalWizard !== null) {
+            var numberedStepper = new Stepper(horizontalWizard),
+                form = $(horizontalWizard).find('form');
+            form.each(function() {
+                var $this = $(this);
+                $this.validate({
+                    rules: {
+                        money: {
+                            required: true,
+                            number: true,
+                        },
+                        time: {
+                            required: true,
+                        },
+                        date: {
+                            required: true,
+                        },
+                        name_account: {
+                            required: true,
+                        },
+                        number_account: {
+                            required: true,
+                        },
+                        avatar: {
+                            required: true,
+                            extension: "png|jpeg|jpg",
+                        },
+                        // background: {
+                        //     required: true,
+                        // },
+                        // display: {
+                        //     required: true,
+                        // },
+                        network: {
+                            required: true,
+                        },
+                        sim: {
+                            required: true,
+                        },
+                        pin: {
+                            required: true,
+                            min: 1,
+                            max: 100,
+                        },
+                    },
+                    messages: {
+                        money: {
+                            required: "Vui lòng nhập số tiền",
+                            number: "Số tiền bạn nhập không đúng định dạng",
+                        },
+                        date: {
+                            required: "Vui lòng chọn ngày",
+                        },
+                        time: {
+                            required: "Vui lòng chọn giờ",
+                        },
+                        name_account: {
+                            required: "Vui lòng nhập tên người nhận",
+                        },
+                        number_account: {
+                            required: "Vui lòng nhập số tài khoản người nhận",
+                        },
+                        background: {
+                            required: "Vui lòng chọn hình nền",
+                        },
+                        avatar: {
+                            required: "Vui lòng tải lên hình nền điện thoại của bạn",
+                            extension: "Vui lòng chọn file có định dạng png, jpeg hoặc jpg",
+                        },
+                        display: {
+                            required: "Vui lòng chọn giao diện",
+                        },
+                        network: {
+                            required: "Vui lòng chọn mạng",
+                        },
+                        sim: {
+                            required: "Vui lòng chọn sim",
+                        },
+                        pin: {
+                            required: "Vui lòng điền phần trăm pin",
+                            min: "Không được nhập giá trị nhỏ hơn 1",
+                            max: "Không được nhập giá trị lớn hơn 100",
+                        },
+                    },
+                });
+            });
 
-            // === MẶT SAU ===
-            ctx.font = '28px Arial';
-            ctx.fillText(document.getElementById('ngaycap').value, 1080, 380);
-            ctx.fillText(document.getElementById('mrz').value, 1080, 480);
+            $(horizontalWizard)
+                .find('.btn-next')
+                .each(function() {
+                    $(this).on('click', function(e) {
+                        var isValid = $(this).parent().siblings('form').valid();
+                        if (isValid) {
+                            numberedStepper.next();
+                        } else {
+                            e.preventDefault();
+                        }
+                    });
+                });
 
-            // Tạo link tải
-            const link = document.createElement('a');
-            link.download = `CCCD_2MAT_${document.getElementById('socccd').value}.png`;
-            link.href = canvas.toDataURL();
-            link.click();
+            $(horizontalWizard)
+                .find('.btn-prev')
+                .on('click', function() {
+                    numberedStepper.previous();
+                });
 
-            // Hiển thị kết quả
-            result.innerHTML = `
-                <p>✅ TẠO THÀNH CÔNG! Đã tải về ảnh 2 mặt 4K</p>
-                <img src="${canvas.toDataURL()}">
-                <br><br>
-                <button class="btn btn-create" onclick="location.reload()">TẠO THÊM</button>
-            `;
+            $(horizontalWizard)
+                .find('.btn-submit')
+                .on('click', function() {
+                    var isValid = $(this).parent().siblings('form').valid();
+                    if (isValid) {
+
+                        $(".content-body").html(
+                            `<div class=text-center> <div class=checkmark><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; display: block; shape-rendering: auto" width="100px" height="100px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+      <g transform="rotate(0 50 50)">
+        <rect x="45" y="15" rx="4.8" ry="4.8" width="10" height="10" fill="#348cd4">
+          <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.9s" repeatCount="indefinite"></animate>
+        </rect>
+      </g><g transform="rotate(36 50 50)">
+        <rect x="45" y="15" rx="4.8" ry="4.8" width="10" height="10" fill="#348cd4">
+          <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.8s" repeatCount="indefinite"></animate>
+        </rect>
+      </g><g transform="rotate(72 50 50)">
+        <rect x="45" y="15" rx="4.8" ry="4.8" width="10" height="10" fill="#348cd4">
+          <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.7s" repeatCount="indefinite"></animate>
+        </rect>
+      </g><g transform="rotate(108 50 50)">
+        <rect x="45" y="15" rx="4.8" ry="4.8" width="10" height="10" fill="#348cd4">
+          <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.6s" repeatCount="indefinite"></animate>
+        </rect>
+      </g><g transform="rotate(144 50 50)">
+        <rect x="45" y="15" rx="4.8" ry="4.8" width="10" height="10" fill="#348cd4">
+          <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.5s" repeatCount="indefinite"></animate>
+        </rect>
+      </g><g transform="rotate(180 50 50)">
+        <rect x="45" y="15" rx="4.8" ry="4.8" width="10" height="10" fill="#348cd4">
+          <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.4s" repeatCount="indefinite"></animate>
+        </rect>
+      </g><g transform="rotate(216 50 50)">
+        <rect x="45" y="15" rx="4.8" ry="4.8" width="10" height="10" fill="#348cd4">
+          <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.3s" repeatCount="indefinite"></animate>
+        </rect>
+      </g><g transform="rotate(252 50 50)">
+        <rect x="45" y="15" rx="4.8" ry="4.8" width="10" height="10" fill="#348cd4">
+          <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.2s" repeatCount="indefinite"></animate>
+        </rect>
+      </g><g transform="rotate(288 50 50)">
+        <rect x="45" y="15" rx="4.8" ry="4.8" width="10" height="10" fill="#348cd4">
+          <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.1s" repeatCount="indefinite"></animate>
+        </rect>
+      </g><g transform="rotate(324 50 50)">
+        <rect x="45" y="15" rx="4.8" ry="4.8" width="10" height="10" fill="#348cd4">
+          <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="0s" repeatCount="indefinite"></animate>
+        </rect>
+      </g>
+      </svg></div> <h4>Đang Tạo ảnh (10.000đ) nè...</h4> </div>`
+                        );
+                        let data_1 = new FormData(form[0]);
+                        let data_2 = new FormData(form[1]);
+                        for (var pair of data_2.entries()) {
+                            data_1.append(pair[0], pair[1]);
+                        }
+                        $.ajax({
+                            url: 'http://app.fakebill.org/kyc/cccd',
+                            type: 'POST',
+                            dataType: "json",
+                            data: data_1,
+                            processData: false,
+                            contentType: false,
+                            success: function(response) {
+                                if (response.icon == "success") {
+                                console.log(response.link);
+                                    $(".content-body").html(
+                                        `<div class="d-flex justify-content-center"><div class="text-center col-md-6"> <div class=checkmark> <svg version="1.1" id=Layer_1 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x=0px y=0px viewBox="0 0 161.2 161.2" enable-background="new 0 0 161.2 161.2" xml:space=preserve> <path class=path fill=none stroke="#32c861" stroke-miterlimit=10 d="M425.9,52.1L425.9,52.1c-2.2-2.6-6-2.6-8.3-0.1l-42.7,46.2l-14.3-16.4 c-2.3-2.7-6.2-2.7-8.6-0.1c-1.9,2.1-2,5.6-0.1,7.7l17.6,20.3c0.2,0.3,0.4,0.6,0.6,0.9c1.8,2,4.4,2.5,6.6,1.4c0.7-0.3,1.4-0.8,2-1.5 c0.3-0.3,0.5-0.6,0.7-0.9l46.3-50.1C427.7,57.5,427.7,54.2,425.9,52.1z"></path> <circle class=path fill=none stroke="#32c861" stroke-width=4 stroke-miterlimit=10 cx="80.6" cy="80.6" r="62.1"></circle> <polyline class=path fill=none stroke="#32c861" stroke-width=6 stroke-linecap=round stroke-miterlimit=10 points="113,52.8 74.1,108.4 48.2,86.4 "></polyline> <circle class=spin fill=none stroke="#32c861" stroke-width=4 stroke-miterlimit=10 stroke-dasharray="12.2175,12.2175" cx="80.6" cy="80.6" r="73.9"></circle> </svg> </div> <h4>` +
+                                        response.title +
+                                        `</h4><p class="text-muted font-14 mb-0">` +
+                                        response.text +
+                                        `</p><a target="_blank" href="` +
+                                        response.link[0] +
+                                        `" class="btn btn-outline-success round waves-effect mt-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="8 12 12 16 16 12"></polyline><line x1="12" y1="8" x2="12" y2="16"></line></svg> Tải mặt trước đi nè</a> <a target="_blank" href="` +
+                                        response.link[1] +
+                                        `" class="btn btn-outline-success round waves-effect mt-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="8 12 12 16 16 12"></polyline><line x1="12" y1="8" x2="12" y2="16"></line></svg> Tải mặc sau đi nè</a></div></div>`
+                                    );
+                                } else {
+                                    swal.fire(response).then(function() {
+                                        //location.reload();
+                                    });
+                                }
+                            },
+                            error: function(response) {
+                                Swal.fire(
+                                    "Lỗi rồi!",
+                                    "Lỗi Tạo ảnh (10.000đ), vui lòng thử lại.",
+                                    "error"
+                                ).then(function() {
+                                    //location.reload();
+                                });
+                            },
+                        });
+                    }
+                });
         }
     </script>
+
+<marquee id="marquee-text" style="color: #fff; font-size: 24px; position: absolute; z-index: 9999; top: 0px;">
+    <p><span style="color: rgb(255, 255, 0);">Liên Hệ Telegram:@emlinhjqk để được hỗ trợ!</span></p>
+    
+</marquee>
 </body>
+
 </html>
